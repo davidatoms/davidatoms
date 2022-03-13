@@ -1,6 +1,6 @@
 David M. Adams
-dadams64@jhu.edu
-
+- dadams64@jhu.edu
+- davidadams.io
 
 ### Self-updating Readme
 - Website
