@@ -1,4 +1,5 @@
-### Introduction
+David M. Adams
+dadams64@jhu.edu
 
 
 ### Self-updating Readme
