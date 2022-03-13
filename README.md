@@ -2,10 +2,8 @@ David M. Adams
 - dadams64@jhu.edu
 - davidadams.io
 
-### Self-updating Readme
-- Website
-- Blog
-- Twitter
+[] Projects Auto
+[] Tweets Auto
 
 [![David's GitHub stats](https://github-readme-stats.vercel.app/api?username=davidatoms)](https://github.com/davidatoms/github-readme-stats)
 
