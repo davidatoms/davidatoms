@@ -1,6 +1,11 @@
-David M. Adams
-- dadams64@jhu.edu
-- davidadams.io
+# Title
+Introduction
+
+### Currently working on
+
+### Currently tweeting about
+
+###
 
 [] Projects Auto
 [] Tweets Auto
