@@ -4,6 +4,7 @@
 ### Self-updating Readme
 - Website
 - Blog
+- Twitter
 
 ### Stats
 [![David's GitHub stats](https://github-readme-stats.vercel.app/api?username=davidatoms)](https://github.com/davidatoms/github-readme-stats)
