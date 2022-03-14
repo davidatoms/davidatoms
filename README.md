@@ -1,4 +1,4 @@
-![Mercedes Benz F1 2022](mercedes_f1.png)
+![Mercedes Benz F1 2022](mercedes_steering.png)
 
 ### I am a ...
 
