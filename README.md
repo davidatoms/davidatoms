@@ -1,7 +1,6 @@
-![Mercedes Benz F1 2022]('https://github.com/davidatoms/davidatoms/mercedes_f1.png')
+![Mercedes Benz F1 2022](mercedes_steering.png)
 
-# David Adams
-Introduction
+### I am a ...
 
 ### Currently working on..
 [] Projects Auto
