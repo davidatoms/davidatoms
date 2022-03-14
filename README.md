@@ -1,4 +1,4 @@
-![Mercedes Benz F1 2022]('https://github.com/davidatoms/davidatoms/mercedes_f1.png')
+![Mercedes Benz F1 2022](mercedes_f1.png)
 
 # David Adams
 Introduction
