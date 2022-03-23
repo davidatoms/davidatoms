@@ -1,3 +1,7 @@
+- Bitcoin Address: bc1q8t7excky35qzc9r4wthqcju2czk7vnkppe5q8d
+- Ethereum Address: 0x15DD2Ba60c39b2d18545428a2B7ca3C08CEdf19b
+- USDC Address: 0x15DD2Ba60c39b2d18545428a2B7ca3C08CEdf19b
+
 | David |   0   |   0   | 
 |-------|-------|-------|
 |   0   | David |   0   |
