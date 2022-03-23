@@ -28,10 +28,11 @@ For more information, visit my website, [davidadams.io](https://davidadams.io). 
 
 ### Try and find me on..
 |          | Twitter              | Facebook              | Instagram              | LinkedIn              | Dribbble |
-| -------- | -------------------- | --------------------- | ---------------------- | --------------------- | |
-| Icons    | [![Twitter][1.1]][1] | [![Facebook][2.1]][2] | [![Instagram][3.1][3]] | [![Linkedin][4.1][4]] | |
-| Type     | Social/Work          | Social Private        | Social Private         | Work                  | |
+| -------- | -------------------- | --------------------- | ---------------------- | --------------------- |--------- |
+| Icons    | [![Twitter][1.1]][1] | [![Facebook][2.1]][2] | [![Instagram][3.1][3]] | [![Linkedin][4.1][4]] |          |
+| Type     | Social/Work          | Social Private        | Social Private         | Work                  | Work     |
 
+![Snow Leopard][snowleopard.PNG)
 
 
 ### What inspires me..
