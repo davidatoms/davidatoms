@@ -15,7 +15,7 @@ For more information, visit my website, [davidadams.io](https://davidadams.io). 
 
 ### 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=davidatoms&langs_count=8)](https://github.com/davidatoms/github-readme-stats)
-[![DavidAtoms's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=davidatoms)](https://github.com/anuraghazra/github-readme-stats)
+[![DavidAtoms's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=davidatoms)](https://github.com/davidatoms/github-readme-stats)
 
 ### Currently working on..
 [ ] Projects Auto
