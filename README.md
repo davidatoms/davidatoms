@@ -1,13 +1,3 @@
-| [ ] Wave Gif | [ ] Malibu House |
-
-### I am a ...
-economics master's degree student at Johns Hopkins University, a junior coder at my house, and an avid F1 and English Premier League fan.
-
-### About me ...
-I grew up in a small town called Alpine, Utah. I have also lived in the Netherlands to pursue a soccer career at 18 years old, El Grenada as a kid, and Germany as a missionary for the Church of Jesus Christ of Latter-day Saints.
-
-For more information, visit my website, [davidadams.io](https://davidadams.io). It's also linked beside this in my GitHub bio.
-
 | David |   0   |   0   | 
 |-------|-------|-------|
 |   0   | David |   0   |
