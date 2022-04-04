@@ -1,4 +1,4 @@
-[![Welcome!](Resources/github-profile-readme-header.png)
+![Welcome!](Resources/github-profile-header-bigger.png)
 
 ### 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=davidatoms&langs_count=8)](https://github.com/davidatoms/github-readme-stats)
