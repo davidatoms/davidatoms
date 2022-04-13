@@ -7,7 +7,7 @@
 01110111 01100101 01101100 01100011 01101111 01101101 01100101 00100000 01110100 01101111 00100000 01101101 01111001 00100000 01100111 01101001 01110100 01101000 01110101 01100010
                               
 ### 🤝 Connect with me:
-                                          
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/harshkumarkhatri/)](https://www.linkedin.com/in/davidadamszx1/)  [![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/_diogorodrigues)](https://twitter.com/david64adams)                                                                                                                                        
 <p align="center"> 
   Visitor count<br>
   <img src="https://profile-counter.glitch.me/davidatoms/count.svg" />
