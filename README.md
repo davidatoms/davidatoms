@@ -6,7 +6,7 @@
 <!-- Connection -->
 ### Connect with me: 🤝
   
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/davidadamszx1/)](https://www.linkedin.com/in/davidadamszx1/)  [![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/david64adams)](https://twitter.com/david64adams)    
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/davidadamszx1/)]([https://www.linkedin.com/in/davidadamszx1/](https://www.linkedin.com/in/davidadams64/))  [![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/david64adams)](https://twitter.com/david64adams)    
 
 <!-- Support -->
 ### Support me here: 💰
