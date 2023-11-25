@@ -1,7 +1,18 @@
 <!-- Introduction --> 
-<p>
-01110111 01100101 01101100 01100011 01101111 01101101 01100101 00100000 01110100 01101111 00100000 01101101 01111001 00100000 01100111 01101001 01110100 01101000 01110101 01100010
-         </p>
+### DavidsSpace
+David's Latest Blog Entry [Subscribe to this Blog]
+<li>Blog 1</li>
+<li>Blog 2</li>
+<li>Blog 3</li>
+
+[View All Blog Entries](#)
+
+<!-- About me -->
+### David's Blurbs
+I'm David Adams. I am a second year master's degree student of financial economics at Johns Hopkins University. I ski, mountain bike, and travel. I am from Alpine, Utah, and love the mountains and the community. Growing up, my dad worked as a consultant and invested in real estate, stocks, and private enterprises. I grew to love that and how people interact through business. During COVID-19, I took a coding boot camp at Columbia University's school for data science and have been coding ever since. 
+
+<!-- Goals and dreams -->
+### What I'd Like to Accomplish
 
 <!-- Connection -->
 ### Connect with me: 🤝
@@ -10,9 +21,7 @@
 
 <!-- Support -->
 ### Support me here: 💰
-- USDC Address: 0x15DD2Ba60c39b2d18545428a2B7ca3C08CEdf19b
 - Bitcoin Address: bc1q8t7excky35qzc9r4wthqcju2czk7vnkppe5q8d
-- Ethereum Address: 0x15DD2Ba60c39b2d18545428a2B7ca3C08CEdf19b
 
 <p align="center"> 
          <strong>Visitor Count</strong>
