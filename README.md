@@ -1,5 +1,5 @@
 <!-- Introduction --> 
-### DavidsSpace
+### David's Space
 David's Latest Blog Entry [Subscribe to this Blog]
 <li>Blog 1</li>
 <li>Blog 2</li>
@@ -9,7 +9,7 @@ David's Latest Blog Entry [Subscribe to this Blog]
 
 <!-- About me -->
 ### David's Blurbs
-I'm David Adams. I am a second year master's degree student of financial economics at Johns Hopkins University. I ski, mountain bike, and travel. I am from Alpine, Utah, and love the mountains and the community. Growing up, my dad worked as a consultant and invested in real estate, stocks, and private enterprises. I grew to love that and how people interact through business. During COVID-19, I took a coding boot camp at Columbia University's school for data science and have been coding ever since. 
+My name is David Adams. I have been studying economics at Johns Hopkins University. This is my portfolio.
 
 <!-- Goals and dreams -->
 ### What I'd Like to Accomplish
