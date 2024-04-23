@@ -1,15 +1,9 @@
 <!-- Introduction --> 
 ### David's Space
-David's Latest Blog Entry [Subscribe to this Blog]
-<li>Blog 1</li>
-<li>Blog 2</li>
-<li>Blog 3</li>
 
-[View All Blog Entries](#)
 
 <!-- About me -->
 ### David's Blurbs
-My name is David Adams. I have been studying economics at Johns Hopkins University. This is my portfolio.
 
 <!-- Goals and dreams -->
 ### What I'd Like to Accomplish
