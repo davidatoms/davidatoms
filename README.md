@@ -1,12 +1,4 @@
-<!-- Introduction --> 
-### David's Space
-
-
-<!-- About me -->
-### David's Blurbs
-
-<!-- Goals and dreams -->
-### What I'd Like to Accomplish
+UNDER CONSTRUCTION
 
 <!-- Connection -->
 ### Connect with me: 🤝
