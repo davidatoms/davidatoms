@@ -1,4 +1,7 @@
-UNDER CONSTRUCTION
+Hi, I am David Adams. I am currently working on PROJECT. I am a dual Master's degree student of Financial Economics and Artificial Intelligence at Johns Hopkins University.
+
+<!-- Self-updating projects, blogs, and things I am reading  -->
+
 
 <!-- Connection -->
 ### Connect with me: 🤝
@@ -9,8 +12,3 @@ UNDER CONSTRUCTION
 ### Support me here: 💰
 - Bitcoin Address: bc1q8t7excky35qzc9r4wthqcju2czk7vnkppe5q8d
 
-<p align="center"> 
-         <strong>Visitor Count</strong>
-           <br>
-  <img src="https://profile-counter.glitch.me/davidatoms/count.svg" />
-</p>
