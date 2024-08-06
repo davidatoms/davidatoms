@@ -20,14 +20,16 @@ I am currently a candidate for a dual master's degree program in artificial inte
 - **Currently working on:** ______________
 
 ### 💼 Experience
-- **[Job Title]**, [Company Name] (Dates)
+- **GPT Math Prompt Trainer**, [Outlier.AI](https://outlier.ai/), Current
   - Description of responsibilities and achievements.
-- **[Job Title]**, [Company Name] (Dates)
+- **Lift Operator I**, [Deer Valley Ski Resort](https://deervalley.com), Winter 22/23 and Winter 23/24
   - Description of responsibilities and achievements.
+- **Data Analyst**, [Dominion Insurance](https://www.dominioninsurance.com/), Time
+- **Alternative Investments Intern**, [Assure Venture Services](https://www.linkedin.com/company/assureco/)
+- **Consultant Intern**, [Mountain Pacific Partners](https://www.linkedin.com/company/mountain-pacific-fund/), Summer and Fall 2021
 
 ### 📫 How to reach me
-- [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/davidadams64/)](https://www.linkedin.com/in/davidadams64/)
-- [![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/david64adams)](https://twitter.com/david64adams)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/davidadams64/)](https://www.linkedin.com/in/davidadams64/)[![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/david64adams)](https://twitter.com/david64adams)[![Substack Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/david64adams)](https://twitter.com/david64adams)
 - [Personal Website/Portfolio](Your Website URL)
 - Email: [Your Email]
 
@@ -39,4 +41,4 @@ Feel free to explore my repositories and connect with me on LinkedIn!
 <!-- Support -->
 ### Support me here: 💰
 - Bitcoin Address: bc1q8t7excky35qzc9r4wthqcju2czk7vnkppe5q8d
-- Buy me a coffee: _________________________
+- Buy me a coffee: ![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)(https://buymeacoffee.com/davidatoms)
