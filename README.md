@@ -23,7 +23,6 @@ I am currently a dual Master's candidate in Artificial Intelligence and Financia
 
 ### 📫 How to reach me
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/davidadams64/)](https://www.linkedin.com/in/davidadams64/)[![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/david64adams)](https://twitter.com/david64adams)
-- [Personal Website/Portfolio](Your Website URL)
 - Email: dadams64@jhu.edu
 
 ### 🎨 Other Interests
