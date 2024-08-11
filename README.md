@@ -7,11 +7,6 @@ I am currently a dual Master's candidate in Artificial Intelligence and Financia
 - **Technologies**: TensorFlow, PyTorch, Scikit-Learn, Pandas, NumPy
 - **Tools**: Git, Docker, Jupyter Notebook, PyCharm
 
-### 🌟 Projects
-- **[Project 1 Name](Link to Project)**: A brief description of the project and your role.
-- **[Project 2 Name](Link to Project)**: A brief description of the project and your role.
-- **[Project 3 Name](Link to Project)**: A brief description of the project and your role.
-
 ### 🎓 Education
 - **MS Financial Economics**, Johns Hopkins University
 - **MENG Artificial Intelligence**, Johns Hopkins University
