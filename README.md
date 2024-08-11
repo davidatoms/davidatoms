@@ -1,7 +1,7 @@
 # Hello, I'm David Adams! 👋
 
 ### 🚀 Professional Profile
-I am currently a candidate for a dual master's degree program in artificial intelligence and financial economics at Johns Hopkins University. Before that, I was a student in the Political Science program at Utah Valley University. 
+I am currently a dual Master's candidate in Artificial Intelligence and Financial Economics at Johns Hopkins University. Prior to that, I was at Utah Valley University, playing soccer for the NCAA D1 team, and working at the neuroscience lab on campus getting my Bachelor's in Political Science.
 
 ### 🛠️ Skills and Technologies
 - **Languages**: Python, R, SQL, JavaScript
