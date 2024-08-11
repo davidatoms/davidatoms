@@ -11,7 +11,6 @@ I am currently a dual Master's candidate in Artificial Intelligence and Financia
 - **MS Financial Economics**, Johns Hopkins University
 - **MENG Artificial Intelligence**, Johns Hopkins University
 - **Certificates:** Data Analytics from Columbia, Financial Management from Johns Hopkins 
-- **Currently working on:** ______________
 
 ### 💼 Experience
 - **GPT Math Prompt Trainer**, [Outlier.AI](https://outlier.ai/), Current
