@@ -15,7 +15,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.12
     - uses: actions/cache@v2
       name: Configure pip caching
       with:
@@ -28,7 +28,7 @@ jobs:
         python -m pip install -r requirements.txt
     - name: Update README
       env:
-        SIMONW_TOKEN: ${{ secrets.SIMONW_TOKEN }}
+        DAVIDATOMS_TOKEN: ${{ secrets.DAVIDATOMS_TOKEN }}
       run: |-
         python build_readme.py
         cat README.md
