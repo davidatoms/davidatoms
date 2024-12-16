@@ -7,7 +7,7 @@ def update_readme():
 	current_time = datetime.now(timezone)
 
 	# Format as "Last Updated: DD MM YYYY HH:MM:SS
-	timestamp = current_time.strftime('Last Updated: %d %b %Y %H:%M:%S')
+	timestamp = current_time.strftime('Last updated -- %d %b %Y %H:%M:%S --')
 
 	# Read the README
 	with open('README.md', 'r') as file:
