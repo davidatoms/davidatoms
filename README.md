@@ -21,46 +21,33 @@ __Updated:__ 16 December 2024 12:54
     <td valign="top">Link [to see the questions I am asking is here](https://davidatoms.github.io/)</td>
   </tr>
 </table>
-See post history on [davidatoms.github.io](https://davidatoms.github.io/)
+[View this table's history](https://davidatoms.github.io/)
 <br>
 <!-- Request my resume here -->
-Request my resume click [here](https://davidatoms.github.io)
+[Request My Resume](https://davidatoms.github.io)
 Comments?
 
 <!-- Background -->
 <!-- TODO Add professional and personal section -->
 ### About Me
 www.davidadams.xyz/about
-- I am a pre-law undergraduate turned programmer.
-- In another world I think I would have been a cartoonist.
-- I recently completed a MS in Financial Economics at Johns Hopkins University.
-- I am currently debating the MS in AI at Johns Hopkins University.
-- I am interested in the positive and negative externalities created by technology innovation.
+I'm a pre-law undergraduate turned programmer with a passion for technology and innovation. Recently completed my MS in Financial Economics at Johns Hopkins University and currently considering pursuing an MS in AI. My journey includes an alternate universe version of myself as a cartoonist, and I'm deeply interested in examining the positive and negative externalities created by technological innovation.
 
 ### Current Research Interests
 www.davidadams.xyz/research
-- AI vs. Blockchain
-- Quantum Computing
-- Recessions
-- Automating the redundant and mundane.
-- Evolutionary sciences
-- Protein predictions
+- Comparative analysis of AI and Blockchain technologies and their real-world applications
+- Quantum Computing implications for modern computing paradigms
+- Economic cycles and recession patterns
+- Process automation and efficiency optimization
+- Applications of evolutionary sciences in modern contexts
+- Advances in protein structure prediction and modeling
  
 ### Goals
 www.davidadams.xyz/statement-of-purpose
-- Improving the labor vs. leisure utility function around the globe.
-- Reducing friction wherever I step foot.
-- Find and extend value through current and future technology.
-- Making money while I sleep.
-- Giving back to the community.
-
-### Future Project Ideas
-www.davidadams.xyz/future-projects
-- kaomojis
+- Optimizing the global labor-leisure utility function
+- Reducing friction in systems and processes
+- Leveraging current and future technology to create and extend value
+- Developing passive income streams
+- Contributing meaningfully to community development
 
 ### Support
-
-<!-- Footer-->
-<footer>
-<p>Privacy & Copyright | Languages Used | Robots |</p>
-</footer>
