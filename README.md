@@ -5,25 +5,25 @@ __Last Updated:__ 16 December 2024 12:54
 <!-- Recent project in the works -->
 <table width="100%">
   <tr>
-    <td valign="top"><strong>Highlighted Project:</strong></td>
+    <td valign="top"><strong>Highlighted</strong></td>
     <td valign="top">MOST RECENT PROJECT</td>
   </tr>
   <tr>
-    <td valign="top"><strong>Recently Polished:</strong></td>
+    <td valign="top"><strong>Polished:</strong></td>
     <td valign="top">MOST RECENTLY</td>
   </tr>
   <tr>
-    <td valign="top"><strong>Recent Bluesky:</strong></td>
+    <td valign="top"><strong>Bluesky Opinions</strong></td>
     <td valign="top">MOST RECENT POST</td>
   </tr>
   <tr>
-    <td valign="top"><strong>See the my past:</strong></td>
-    <td valign="top">[See past projects](https://davidadams.xyz)</td>
+    <td valign="top"><strong>Log of Past Projects:</strong></td>
+    <td valign="top"_See more projects_ [here](https://davidadams.xyz)</td>
   </tr>
 </table>
 
 <!-- Resume Request -->
-To request my resume, [davidadams.io](https://github.com/davidatoms.github.io)
+To request my resume click [here](https://github.com/davidatoms.github.io)
 
 <!-- Background -->
 <!-- TODO Add professional and personal section -->
