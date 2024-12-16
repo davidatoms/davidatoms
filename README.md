@@ -5,20 +5,20 @@
 <!-- Recent project in the works -->
 <table width="100%">
   <tr>
-    <td valign="top"><strong>Current Project:</strong></td>
-    <td valign="top">MOST RECENTLY</td>
+    <td valign="top"><strong>Focus Project:</strong></td>
+    <td valign="top">MOST RECENT</td>
   </tr>
     <tr>
     <td valign="top"><strong>Polished Project:</strong></td>
-    <td valign="top">MOST RECENTLY</td>
+    <td valign="top">MOST RECENT</td>
   </tr>
   <tr>
     <td valign="top"><strong>Bluesky Opinion:</strong></td>
     <td valign="top">MOST RECENT POST</td>
   </tr>
     <tr>
-    <td valign="top"><strong>Polished:</strong></td>
-    <td valign="top">MOST RECENTLY</td>
+    <td valign="top"><strong>Recent Question:</strong></td>
+    <td valign="top">MOST RECENT</td>
   </tr>
 </table>
 
