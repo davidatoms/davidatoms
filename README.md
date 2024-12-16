@@ -17,15 +17,18 @@ __Last Updated:__ 16 December 2024 12:54
     <td valign="top">MOST RECENT POST</td>
   </tr>
   <tr>
-    <td valign="top"><strong>Current Interests:</strong></td>
-    <td valign="top">INTERESTS</td>
+    <td valign="top"><strong>See the my past:</strong></td>
+    <td valign="top">[See past projects](https://davidadams.xyz)</td>
   </tr>
 </table>
-<!-- Past projects -->
-To see the latest of all these posts click here **[davidadams.xyz/past-logs](https://davidadams.xyz)**.
+
+<!-- Resume Request -->
+To request my resume, [davidadams.io](https://github.com/davidatoms.github.io)
 
 <!-- Background -->
+<!-- TODO Add professional and personal section -->
 ### About Me
+www.davidadams.xyz/about
 - I am a pre-law undergraduate turned programmer.
 - In another world I think I would have been a cartoonist.
 - I recently completed a MS in Financial Economics at Johns Hopkins University.
@@ -33,22 +36,27 @@ To see the latest of all these posts click here **[davidadams.xyz/past-logs](htt
 - I am interested in the positive and negative externalities created by technology innovation.
 
 ### Current Research Interests
+www.davidadams.xyz/research
 - AI vs. Blockchain
 - Quantum Computing
 - Recessions
 - Automating the redundant and mundane.
-- 
+- Evolutionary sciences
+- Protein predictions
+ 
 ### Goals
+www.davidadams.xyz/statement-of-purpose
 - Improving the labor vs. leisure utility function around the globe.
 - Reducing friction wherever I step foot.
 - Find and extend value through current and future technology.
+- Making money while I sleep.
+- Giving back to the community.
 
 ### Future Project Ideas
+www.davidadams.xyz/future-projects
+- kaomojis
 
 <!-- Footer-->
 <footer>
-<p>-----------</p>
-<p>Privacy & Copyright</p>
-<p>Languages Used</p>
-<p>robots.txt</p>
+<p>Privacy & Copyright | Languages Used | Robots |</p>
 </footer>
