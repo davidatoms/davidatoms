@@ -1,28 +1,28 @@
-#DAVID ADAMS
+# DAVID ADAMS
 <!-- Last updated -->
 __Last Updated:__ 16 December 2024 12:54
 
 <!-- Recent project in the works -->
 <table width="100%">
   <tr>
-    <td valign="top" width="45%"><strong>Highlighted Project:</strong></td>
-    <td valign="top" width="55%">MOST RECENT PROJECT</td>
+    <td valign="top"><strong>Highlighted Project:</strong></td>
+    <td valign="top">MOST RECENT PROJECT</td>
   </tr>
   <tr>
-    <td valign="top" width="45%"><strong>Recently Polished:</strong></td>
-    <td valign="top" width="55%">MOST RECENTLY</td>
+    <td valign="top"><strong>Recently Polished:</strong></td>
+    <td valign="top">MOST RECENTLY</td>
   </tr>
   <tr>
-    <td valign="top" width="45%"><strong>On Bluesky:</strong></td>
-    <td valign="top" width="55%">MOST RECENT POST</td>
+    <td valign="top"><strong>Recent Bluesky:</strong></td>
+    <td valign="top">MOST RECENT POST</td>
   </tr>
   <tr>
-    <td valign="top" width="45%"><strong>Current Interests:</strong></td>
-    <td valign="top" width="55%">INTERESTS</td>
+    <td valign="top"><strong>Current Interests:</strong></td>
+    <td valign="top">INTERESTS</td>
   </tr>
 </table>
 <!-- Past projects -->
-To see the latest of all these posts click here [davidadams.xyz/past-logs](https://davidadams.xyz)
+To see the latest of all these posts click here **[davidadams.xyz/past-logs](https://davidadams.xyz)**.
 
 <!-- Background -->
 ### About Me
@@ -51,3 +51,4 @@ To see the latest of all these posts click here [davidadams.xyz/past-logs](https
 <p>Privacy & Copyright</p>
 <p>Languages Used</p>
 <p>robots.txt</p>
+</footer>
