@@ -18,10 +18,10 @@ __Aliases:__ @deowulf @
   </tr>
   <tr>
     <td valign="top"><strong>Questions I am asking here:</strong></td>
-    <td valign="top">Link [to see the questions I am asking is here](https://davidadams.xyz).</td>
+    <td valign="top">Link [to see the questions I am asking is here](https://davidatoms.github.io/)</td>
   </tr>
 </table>
-See post history on [github.com/davidatoms.github.io](https://github.com/davidatoms.github.io)
+See post history on [github.com/davidatoms.github.io](https://github.com/davidatoms.github.io/)
 <br>
 <!-- Request my resume here -->
 Request my resume click [here](https://github.com/davidatoms.github.io)
