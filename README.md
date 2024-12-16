@@ -1,6 +1,13 @@
 # DAVID ADAMS
+<!-- Navigation Tabs -->
+<div align="center">
+  <a href="README.md" style="padding: 8px 16px; text-decoration: none;">Overview</a> |
+  <a href="projects.md" style="padding: 8px 16px; text-decoration: none;">Projects</a> |
+  <a href="research.md" style="padding: 8px 16px; text-decoration: none;">Research</a> |
+  <a href="blog.md" style="padding: 8px 16px; text-decoration: none;">Blog</a>
+</div>
 
-<!-- Current Work Section -->
+<!--Current Work Section -->
 <table>
   <tr>
     <td valign="top" width="33%"><strong>Highlighted Project:</strong></td>
