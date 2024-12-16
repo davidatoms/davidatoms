@@ -1,7 +1,7 @@
 # DAVID ADAMS
 <!-- Last updated -->
 __Updated:__ 16 December 2024 12:54
-__Aliases:__ @deowulf @ 
+ 
 <!-- Recent project in the works -->
 <table width="100%">
   <tr>
@@ -21,10 +21,10 @@ __Aliases:__ @deowulf @
     <td valign="top">Link [to see the questions I am asking is here](https://davidatoms.github.io/)</td>
   </tr>
 </table>
-See post history on [github.com/davidatoms.github.io](https://github.com/davidatoms.github.io/)
+See post history on [davidatoms.github.io](https://davidatoms.github.io/)
 <br>
 <!-- Request my resume here -->
-Request my resume click [here](https://github.com/davidatoms.github.io)
+Request my resume click [here](https://davidatoms.github.io)
 Comments?
 
 <!-- Background -->
