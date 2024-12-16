@@ -15,7 +15,7 @@ def update_readme():
 
 	# Update the timestamp line
 	for i, line in enumerate(content):
-		if 'Last Updated:' in line:
+		if 'Last updated --' in line:
 			content[i] = timestamp + '\n\n'
 			break
 
