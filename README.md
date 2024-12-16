@@ -1,6 +1,6 @@
 # DAVID ADAMS
 <!-- Last updated -->
-__Updated:__ 16 December 2024 12:54
+Last updated: 16 December 2024 12:54
 
 <!-- Recent project in the works -->
 <table width="100%">
@@ -23,16 +23,17 @@ __Updated:__ 16 December 2024 12:54
 </table>
 
 <!-- Request my resume here -->
-Request my resume_
+Request my resume:
+<!-- Use the palantir js -->
 
 <!-- Background -->
 <!-- TODO Add professional and personal section -->
 ### About Me
 www.davidadams.xyz/about
-- I'm a pre-law undergraduate turned programmer with a passion for technology and innovation. 
-- Recently completed my MS in Financial Economics at Johns Hopkins University and currently considering pursuing an MS in AI.
-- My journey includes an alternate universe version of myself as a cartoonist
-- I'm deeply interested in examining the positive and negative externalities created by technological innovation.
+- I was a prelaw undergraduate who found a passion for programming during the COVID-19 pandemic.
+- Recently, I completed the MS in Financial Economics at Johns Hopkins University
+- I just started a second MEng in Artificial Intelligence
+- My interests intersect where technology impacts life sciences and betterment of society.
 
 ### Current Research Interests
 www.davidadams.xyz/research
