@@ -1,7 +1,7 @@
 # DAVID ADAMS
 <!-- Last updated -->
 __Updated:__ 16 December 2024 12:54
-
+__Aliases:__ @deowulf @ 
 <!-- Recent project in the works -->
 <table width="100%">
   <tr>
@@ -21,11 +21,11 @@ __Updated:__ 16 December 2024 12:54
     <td valign="top">Link [to see the questions I am asking is here](https://davidadams.xyz).</td>
   </tr>
 </table>
-<p><small>[Past updates](https://github.com/davidatoms.github.io)
+See post history on [github.com/davidatoms.github.io](https://github.com/davidatoms.github.io)
 <br>
-
-<-- Request my resume here -->
+<!-- Request my resume here -->
 Request my resume click [here](https://github.com/davidatoms.github.io)
+Comments?
 
 <!-- Background -->
 <!-- TODO Add professional and personal section -->
@@ -57,6 +57,8 @@ www.davidadams.xyz/statement-of-purpose
 ### Future Project Ideas
 www.davidadams.xyz/future-projects
 - kaomojis
+
+### Support
 
 <!-- Footer-->
 <footer>
