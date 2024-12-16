@@ -1,6 +1,6 @@
 # DAVID ADAMS
 <!-- Last updated -->
-*Last updated -- 16 December 2024 12:54 --* 
+Last Updated:
 
 <!-- Recent project in the works -->
 <table width="100%">
