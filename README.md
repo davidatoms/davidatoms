@@ -1,46 +1,30 @@
 # DAVID ADAMS
 <!-- Last updated -->
-<!-- Last Updated Section -->
-|
- ⏰ 14:30 
-|
- 🕑 
-|
- Last Updated: March 16, 2024 
-|
-!
-[
-Time Since Update
-](
-https://img.shields.io/badge/dynamic/json?color=blue&label=Updated&query=time_since&url=https://api.github.com/repos/YOUR_USERNAME/YOUR_USERNAME/commits/main
-)
-|
-|
-----------
-|
------
-|
----------------------------
-|
------------------
-|
-
+Last Updated: 16 December 2024 12:54
 
 <!-- Recent project in the works -->
 <table>
   <tr>
-    <td valign="top" width="33%"><strong>Highlighted Project:</strong></td>
-    <td valign="top" width="66%">MOST RECENT PROJECT</td>
+    <td valign="top" width="45%"><strong>Highlighted Project:</strong></td>
+    <td valign="top" width="55%">MOST RECENT PROJECT</td>
   </tr>
   <tr>
-    <td valign="top" width="33%"><strong>Recently Polished:</strong></td>
-    <td valign="top" width="66%">MOST RECENTLY</td>
+    <td valign="top" width="45%"><strong>Recently Polished:</strong></td>
+    <td valign="top" width="55%">MOST RECENTLY</td>
   </tr>
   <tr>
-    <td valign="top" width="33%"><strong>On Bluesky:</strong></td>
-    <td valign="top" width="66%">MOST RECENT POST</td>
+    <td valign="top" width="45%"><strong>On Bluesky:</strong></td>
+    <td valign="top" width="55%">MOST RECENT POST</td>
   </tr>
+<tr>
+<td valign="top" width="45%"><strong>Current Interests:</strong></td>
+<td valign="top" width="55%">INTERESTS</td>
+</tr>
+<tr>
+
 </table>
+<!-- Past projects -->
+To see the latest of all these posts click here ![davidadams.xyz/past-logs](https://davidadams.xyz)
 
 <!-- Background -->
 ### About Me
