@@ -5,20 +5,20 @@ __Updated:__ 16 December 2024 12:54
 <!-- Recent project in the works -->
 <table width="100%">
   <tr>
-    <td valign="top"><strong>Highlighted:</strong></td>
-    <td valign="top">MOST RECENT PROJECT</td>
+    <td valign="top"><strong>Current Project:</strong></td>
+    <td valign="top">MOST RECENTLY</td>
   </tr>
-  <tr>
-    <td valign="top"><strong>Polished:</strong></td>
+    <tr>
+    <td valign="top"><strong>Polished Project:</strong></td>
     <td valign="top">MOST RECENTLY</td>
   </tr>
   <tr>
     <td valign="top"><strong>Bluesky Opinion:</strong></td>
     <td valign="top">MOST RECENT POST</td>
   </tr>
-  <tr>
-    <td valign="top"><strong> This Table's History </strong></td>
-    <td valign="top"> View this table's history www.davidatoms.github.io/ </td>
+    <tr>
+    <td valign="top"><strong>Polished:</strong></td>
+    <td valign="top">MOST RECENTLY</td>
   </tr>
 </table>
 
