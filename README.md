@@ -1,13 +1,22 @@
 # DAVID ADAMS
-<!-- Navigation Tabs -->
-<div align="center">
-  <a href="README.md" style="padding: 8px 16px; text-decoration: none;">Overview</a> |
-  <a href="projects.md" style="padding: 8px 16px; text-decoration: none;">Projects</a> |
-  <a href="research.md" style="padding: 8px 16px; text-decoration: none;">Research</a> |
-  <a href="blog.md" style="padding: 8px 16px; text-decoration: none;">Blog</a>
-</div>
 
-<!--Current Work Section -->
+<!-- Technology Stack -->
+### Technologies & Tools
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+### Frameworks & Libraries
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+
+### Databases & Cloud
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+
+<!-- Updatingk Section -->
 <table>
   <tr>
     <td valign="top" width="33%"><strong>Highlighted Project:</strong></td>
