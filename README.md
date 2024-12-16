@@ -3,13 +3,16 @@ DAVID ADAMS
 <table>
 <tr>
 <td valign="top" width="33%">Highlighted Project: </td>
-<td valign="top" width="66%">MOST RECENT PROJECT</td></tr>
+<td valign="top" width="66%">MOST RECENT PROJECT</td>
+</tr>
 <tr>
 <td valign="top" width="33%">Recently Polished:</td>
-<td valign="top" width="66%>MOST RECENTLY</td></tr>
+<td valign="top" width="66%>MOST RECENTLY</td>
+</tr>
 <tr>
 <td valign="top" width="33%">On Bluesky:</td>
-<td valign="top" width="66%">MOST RECENT POST</td></tr>
+<td valign="top" width="66%">MOST RECENT POST</td>
+</tr>
 </table>
  
 <!--Interesting fact -->
