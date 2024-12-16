@@ -1,6 +1,6 @@
 # DAVID ADAMS
 <!-- Last updated -->
-__Last Updated:__ 16 December 2024 12:54
+Updated: 16 December 2024 12:54
 
 <!-- Recent project in the works -->
 <table width="100%">
@@ -18,12 +18,13 @@ __Last Updated:__ 16 December 2024 12:54
   </tr>
   <tr>
     <td valign="top"><strong>Log of Past Projects:</strong></td>
-    <td valign="top"_See more projects_ [here](https://davidadams.xyz)</td>
+    <td valign="top">[See more](https://github.com/davidatoms.github.io)</td>
   </tr>
 </table>
 
-<!-- Resume Request -->
-To request my resume click [here](https://github.com/davidatoms.github.io)
+<!-- Actions -->
+Request my resume click [here](https://github.com/davidatoms.github.io)
+See the questions I am asking [here](https://davidadams.xyz)
 
 <!-- Background -->
 <!-- TODO Add professional and personal section -->
