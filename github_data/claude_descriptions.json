@@ -1,0 +1,52 @@
+{
+  "lithium-lifecycle": {
+    "text": "A collection of resources exploring the lithium lifecycle, including diagrams, JSON data, and HTML visualizations from a research project on the lithium industry.",
+    "generated_at": "2025-02-21T02:06:16.976381",
+    "repo_type": "original"
+  },
+  "shiftdating": {
+    "text": "A Flutter project serving as a starting point for developing a dating application.",
+    "generated_at": "2025-02-21T02:06:19.785005",
+    "repo_type": "original"
+  },
+  "davidatoms": {
+    "text": "David Adams' personal repository showcasing his projects, coding samples, and professional profile.",
+    "generated_at": "2025-02-21T02:06:22.610675",
+    "repo_type": "original"
+  },
+  "openfda-backend": {
+    "text": "A Go-based backend for querying and processing OpenFDA data, providing an API with filters for medical device, pharmaceutical, and other data.",
+    "generated_at": "2025-02-21T02:06:25.531411",
+    "repo_type": "original"
+  },
+  "davidadams.xyz": {
+    "text": "The davidadams.xyz repository hosts the source code for David Adams' personal website, showcasing his professional profile and online presence.",
+    "generated_at": "2025-02-21T02:06:28.513514",
+    "repo_type": "original"
+  },
+  "heritrix3": {
+    "text": "Heritrix is the Internet Archive's open-source, extensible, web-scale, archival-quality web crawler for collecting and preserving digital artifacts for future researchers and generations.",
+    "generated_at": "2025-02-21T02:06:31.712591",
+    "repo_type": "fork"
+  },
+  "Tanuki": {
+    "text": "Tanuki is a trustless wallet scoring protocol that uses ZKPs to calculate wallet scores based on historical on-chain activity, enabling use cases like loyalty-based subsidies and variable lending rates.",
+    "generated_at": "2025-02-21T02:06:35.024850",
+    "repo_type": "fork"
+  },
+  "exo": {
+    "text": "exo unifies everyday devices like iPhones, Macs, and Android phones into a powerful AI cluster for running large language models and computer vision models.",
+    "generated_at": "2025-02-21T02:06:38.968503",
+    "repo_type": "fork"
+  },
+  "graphiti": {
+    "text": "Graphiti is a temporal knowledge graph library that builds dynamic graphs representing evolving relationships between entities over time, enabling querying via time, text, semantic, and graph techniques.",
+    "generated_at": "2025-02-21T02:06:42.971340",
+    "repo_type": "fork"
+  },
+  "zep-python": {
+    "text": "Zep-python is a Python SDK for Zep, a long-term memory service that enables AI assistants to recall, understand, and extract data from chat histories, powering personalized AI experiences.",
+    "generated_at": "2025-02-21T02:06:46.868232",
+    "repo_type": "fork"
+  }
+}

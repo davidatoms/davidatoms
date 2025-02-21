@@ -1,0 +1,10 @@
+dammastock: Dammastock is an application for tracking and analyzing stock market data, providing real-time quotes, historical data, and investment portfolio management tools.
+lithium-lifecycle: A repository for lithium-lifecycle
+shiftdating: A Flutter project for a dating app, providing resources to get started with Flutter development, including codelabs, samples, and documentation.
+neuralace-front: This repository provides a minimal React setup with Vite, including hot module replacement (HMR) and ESLint rules, using either Babel or SWC for Fast Refresh.
+en-605-202-lab1: This repository provides functionality to convert arithmetic expressions between infix, postfix, and prefix notations, with accompanying tests and resources for input/output handling.
+heritrix3: Heritrix is an open-source, extensible, web-scale, archival-quality web crawler developed by the Internet Archive, designed to respect robots.txt and META nofollow tags.
+Tanuki: Tanuki is a trustless wallet scoring protocol using ZKPs to calculate wallet scores based on historical on-chain activity, enabling modular use cases like loyalty-based subsidies and variable lending rates.
+exo: exo is an open-source system that allows you to create a distributed AI cluster using everyday devices like phones, laptops, and Raspberry Pis for running large language models.
+graphiti: Graphiti is an open-source library for building dynamic, temporally aware Knowledge Graphs that ingest unstructured and structured data, enabling complex reasoning over evolving relationships between entities over time.
+zep-python: Zep is a long-term memory service that persists and recalls chat histories for AI assistants, enabling contextually aware responses by leveraging conversation summaries and relevant data.
