@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white" />
 </p>
 
-I am interested in how technology pushes the frontier of human possibility forward and makes life now and in the future, better. If you're interested in supporting, buy me a book from __[The Kings English](https://kingsenglish.com/)__. 
+I am passionate about how technology expands the frontiers of human potential, shaping a better tomorrow. By understanding, innovating, and investing in these opportunities today, tomorrow can be better than today.
 
 ## Recent Work 
 <!-- PROJECTS-LIST:START --> 
