@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white" />
 </p>
 
-I am passionate about how technology expands the frontiers of human potential, shaping a better tomorrow. By understanding, innovating, and investing in these opportunities today, tomorrow can be better than today.
+I am passionate about a better tomorrow through innovation and investments.
 
 ## Recent Work 
 <!-- PROJECTS-LIST:START --> 
