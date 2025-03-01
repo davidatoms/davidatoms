@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white" />
 </p>
 
-I am passionate about a better tomorrow through innovation and investments.
+I am passionate about a better tomorrow through innovation and investments. Find my [resume here](https://docs.google.com/document/d/1deAcWqb8XMO_oV23URmtHWdM7cHVlyMQpMUB47OZgyM/edit?tab=t.0).
 
 ## Recent Work 
 <!-- PROJECTS-LIST:START --> 
