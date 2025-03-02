@@ -51,55 +51,39 @@ os.makedirs(DATA_DIRECTORY, exist_ok=True)
 
 def fetch_github_data():
     """
-    Fetch repository data from GitHub API and save to a JSON file.
-    Returns a dictionary of repos with their details.
+    Get the latest 10 repos from GitHub and save them.
     """
-    print("STEP 1: Fetching GitHub repository data...")
+    print("Getting GitHub repos...")
     
-    headers = {"Authorization": f"token {GITHUB_TOKEN}"} if GITHUB_TOKEN else {}
+    headers = {}
+    if GITHUB_TOKEN:
+        headers = {"Authorization": f"token {GITHUB_TOKEN}"}
     
-    # Get user's repositories (both original and forked)
-    url = f"https://api.github.com/users/{GITHUB_USERNAME}/repos?sort=updated&per_page=100"
+    url = f"https://api.github.com/users/{GITHUB_USERNAME}/repos?sort=updated&per_page=10"
     response = requests.get(url, headers=headers)
     
     if response.status_code != 200:
-        print(f"Error fetching repos: {response.status_code} - {response.text}")
+        print("Error getting repos:", response.status_code, response.text)
         return {}
     
-    all_repos = response.json()
+    repos = response.json()
     
-    # Separate into original and forked repos
-    original_repos = [repo for repo in all_repos if not repo["fork"]][:MAX_REPOS//2]
-    forked_repos = [repo for repo in all_repos if repo["fork"]][:MAX_REPOS//2]
-    
-    # Combine into a single list with type indicator
     repos_to_process = []
-    
-    for repo in original_repos:
-        repos_to_process.append({
+    for repo in repos:
+        repo_info = {
             "name": repo["name"],
             "url": repo["html_url"],
             "description": repo["description"],
-            "type": "original",
+            "type": "original" if not repo["fork"] else "fork",
             "readme": fetch_readme(repo["name"], headers)
-        })
+        }
+        repos_to_process.append(repo_info)
     
-    for repo in forked_repos:
-        repos_to_process.append({
-            "name": repo["name"],
-            "url": repo["html_url"],
-            "description": repo["description"],
-            "type": "fork",
-            "readme": fetch_readme(repo["name"], headers)
-        })
-    
-    # Save the data to a permanent JSON file
-    with open(GITHUB_DATA_FILE, 'w', encoding='utf-8') as f:
+    with open(GITHUB_DATA_FILE, 'w') as f:
         json.dump(repos_to_process, f, indent=2)
     
-    print(f"GitHub data saved to {GITHUB_DATA_FILE}")
-    print(f"  - {len(original_repos)} original repositories")
-    print(f"  - {len(forked_repos)} forked repositories")
+    print("Saved GitHub data to file")
+    print("Processed", len(repos_to_process), "repos")
     
     return repos_to_process
 
@@ -154,21 +138,14 @@ def generate_descriptions(repos):
             descriptions[repo_name] = existing_descriptions[repo_name]
             continue
         
-        print(f"Processing {i+1}/{len(repos)}: {repo_name} ({repo['type']})")
+        print(f"Processing {i+1}/{len(repos)}: {repo_name}")
         
-        # Different prompt based on original vs fork
-        if repo["type"] == "original":
-            description = get_claude_description(
-                repo_name, 
-                repo["readme"], 
-                "Generate a concise 1-2 sentence description of this original repository."
-            )
-        else:
-            description = get_claude_description(
-                repo_name, 
-                repo["readme"], 
-                "Generate a concise 1-2 sentence description of this forked repository, explaining what the original project does."
-            )
+        # Use the same prompt for all repos
+        description = get_claude_description(
+            repo_name, 
+            repo["readme"], 
+            "Generate a concise 1-2 sentence description of this repository explaining what it does."
+        )
         
         if description:
             descriptions[repo_name] = {
@@ -178,7 +155,7 @@ def generate_descriptions(repos):
             }
         else:
             # Fallback to GitHub description
-            fallback = repo["description"] or f"{'Forked repository' if repo['type'] == 'fork' else 'Repository'} {repo_name}"
+            fallback = repo["description"] or f"Repository {repo_name}"
             descriptions[repo_name] = {
                 "text": fallback,
                 "generated_at": datetime.now().isoformat(),
@@ -290,44 +267,29 @@ def update_readme(github_data, descriptions):
     with open(README_FILE, 'r', encoding='utf-8') as f:
         readme_content = f.read()
     
-    # We'll modify how repositories are filtered to ensure we're using the correct information
-    # First, get all repos by type from the descriptions dict
-    original_repos = []
-    forked_repos = []
+    # Prepare a single list of all repos
+    all_repos = []
     
-    # Use the descriptions dictionary to categorize repos
-    for repo_name, repo_info in descriptions.items():
-        if repo_info["repo_type"] == "original":
-            # Find matching repo data from github_data
-            repo_data = next((repo for repo in github_data if repo["name"] == repo_name), None)
-            if repo_data:
-                original_repos.append((repo_name, repo_data["url"], repo_info["text"]))
-        elif repo_info["repo_type"] == "fork":
-            # Find matching repo data from github_data
-            repo_data = next((repo for repo in github_data if repo["name"] == repo_name), None)
-            if repo_data:
-                forked_repos.append((repo_name, repo_data["url"], repo_info["text"]))
+    # Use the github_data list to keep the original sorting (most recent first)
+    for repo in github_data:
+        repo_name = repo["name"]
+        if repo_name in descriptions:
+            all_repos.append((repo_name, repo["url"], descriptions[repo_name]["text"], descriptions[repo_name]["repo_type"]))
     
-    # Sort repos by their order in the descriptions dict to maintain order
-    # (or alternatively, you could sort by another criterion like update time)
+    # Generate the combined section with all repos
+    combined_section = ""
+    for i, (repo_name, repo_url, desc, repo_type) in enumerate(all_repos):
+        combined_section += f"- [{repo_name}]({repo_url}) - <!-- CLAUDE_DESCRIPTION{i+1}_START -->{desc}<!-- CLAUDE_DESCRIPTION{i+1}_END -->\n"
     
-    # Update original projects section
-    original_section = ""
-    for i, (repo_name, repo_url, desc) in enumerate(original_repos):
-        original_section += f"- [{repo_name}]({repo_url}) - <!-- CLAUDE_DESCRIPTION{i+1}_START -->{desc}<!-- CLAUDE_DESCRIPTION{i+1}_END -->\n"
-    
-    # Update forked projects section
-    forked_section = ""
-    for repo_name, repo_url, desc in forked_repos:
-        forked_section += f"- [{repo_name}]({repo_url}) - {desc}\n"
-    
-    # Update the PROJECTS-LIST section
+    # Update the PROJECTS-LIST section with all repos
     projects_pattern = re.compile(r'(<!-- PROJECTS-LIST:START -->).*?(<!-- PROJECTS-LIST:END -->)', re.DOTALL)
-    readme_content = projects_pattern.sub(f'\\1 \n{original_section}\\2', readme_content)
+    readme_content = projects_pattern.sub(f'\\1 \n{combined_section}\\2', readme_content)
     
-    # Update the RECENT_FORKED_REPOS section
-    forks_pattern = re.compile(r'(<!-- RECENT_FORKED_REPOS:START -->).*?(<!-- RECENT_FORKED_REPOS:END -->)', re.DOTALL)
-    readme_content = forks_pattern.sub(f'\\1 \n{forked_section}\\2', readme_content)
+    # Remove the RECENT_FORKED_REPOS section if not needed anymore
+    if "<!-- RECENT_FORKED_REPOS:START -->" in readme_content:
+        forks_pattern = re.compile(r'(<!-- RECENT_FORKED_REPOS:START -->).*?(<!-- RECENT_FORKED_REPOS:END -->)', re.DOTALL)
+        # Replace with empty content between the markers
+        readme_content = forks_pattern.sub('\\1 \n\\2', readme_content)
     
     # Update the LAST_UPDATED section if it exists
     last_updated = datetime.now().strftime('%B %d, %Y at %H:%M')
@@ -345,29 +307,21 @@ def update_readme(github_data, descriptions):
 
 def create_new_readme(github_data, descriptions):
     """Create a new README.md file if none exists"""
-    # Group repos by type
-    original_repos = [repo for repo in github_data if repo["type"] == "original"]
-    forked_repos = [repo for repo in github_data if repo["type"] == "fork"]
+    # Create one combined list of repos
+    all_repos = []
+    for repo in github_data:
+        repo_name = repo["name"]
+        if repo_name in descriptions:
+            all_repos.append((repo_name, repo["url"], descriptions[repo_name]["text"]))
     
     last_updated = datetime.now().strftime('%B %d, %Y at %H:%M')
     day_of_year = datetime.now().timetuple().tm_yday
     year_progress = round(day_of_year / 365, 3)
     
-    # Generate original projects section
-    original_section = ""
-    for i, repo in enumerate(original_repos):
-        repo_name = repo["name"]
-        if repo_name in descriptions:
-            desc = descriptions[repo_name]["text"]
-            original_section += f"- [{repo_name}]({repo['url']}) - <!-- CLAUDE_DESCRIPTION{i+1}_START -->{desc}<!-- CLAUDE_DESCRIPTION{i+1}_END -->\n"
-    
-    # Generate forked projects section
-    forked_section = ""
-    for repo in forked_repos:
-        repo_name = repo["name"]
-        if repo_name in descriptions:
-            desc = descriptions[repo_name]["text"]
-            forked_section += f"- [{repo_name}]({repo['url']}) - {desc}\n"
+    # Generate combined section
+    combined_section = ""
+    for i, (repo_name, repo_url, desc) in enumerate(all_repos):
+        combined_section += f"- [{repo_name}]({repo_url}) - <!-- CLAUDE_DESCRIPTION{i+1}_START -->{desc}<!-- CLAUDE_DESCRIPTION{i+1}_END -->\n"
     
     # Create README content with preserved bio
     readme_content = f"""# {GITHUB_USERNAME}'s GitHub Readme
@@ -384,19 +338,12 @@ def create_new_readme(github_data, descriptions):
 
 I am interested in how technology pushes the frontier of human possibility and in making life a little better for both now and the future. If you're interested in supporting, feel free to buy me a book from **The King's English**.
 
-## Recent Work
+## Recent Repositories
 
 <!-- PROJECTS-LIST:START --> 
-{original_section}<!-- PROJECTS-LIST:END -->
+{combined_section}<!-- PROJECTS-LIST:END -->
 
 _Project descriptions generated by Anthropic's Claude, backed by GitHub Actions_
-
----
-
-## Recent Forks
-
-<!-- RECENT_FORKED_REPOS:START --> 
-{forked_section}<!-- RECENT_FORKED_REPOS:END -->
 
 ---
 
