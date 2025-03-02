@@ -48,5 +48,50 @@
     "text": "Zep-python is a Python SDK for Zep, a long-term memory service that enables AI assistants to recall, understand, and extract data from chat histories, powering personalized AI experiences.",
     "generated_at": "2025-02-21T02:06:46.868232",
     "repo_type": "fork"
+  },
+  "jupyter_tool": {
+    "text": "The jupyter_tool repository provides Python tools for programmatically creating, loading, and manipulating Jupyter notebooks, enabling AI agents to interact with notebook content.",
+    "generated_at": "2025-03-01T22:29:26.594092",
+    "repo_type": "fork"
+  },
+  "fabric": {
+    "text": "`fabric` is an open-source framework that augments humans using AI by breaking down problems into components and applying customizable AI prompts (called Patterns) to each component.",
+    "generated_at": "2025-03-01T22:29:30.810583",
+    "repo_type": "fork"
+  },
+  "buster": {
+    "text": "Buster is a modern analytics platform built from the ground up with AI in mind, offering a data warehouse and BI tools to enable powerful, self-serve experiences.",
+    "generated_at": "2025-03-01T22:29:34.533052",
+    "repo_type": "fork"
+  },
+  "gnome-calendar": {
+    "text": "GNOME Calendar is a simple and beautifully designed calendar application for the GNOME desktop environment, focusing on attention to detail and design.",
+    "generated_at": "2025-03-01T22:29:37.357019",
+    "repo_type": "fork"
+  },
+  "supervision": {
+    "text": "Supervision is an open-source Python library providing reusable computer vision tools for loading datasets, visualizing detections, and integrating with popular models and libraries.",
+    "generated_at": "2025-03-01T22:29:41.395544",
+    "repo_type": "fork"
+  },
+  "microeconomic-modeling": {
+    "text": "This repository models various companies' cost, revenue, and profit functions using mathematical economic principles, aiming to forecast financial metrics and analyze strategic decisions.",
+    "generated_at": "2025-03-01T22:29:44.627122",
+    "repo_type": "original"
+  },
+  "DeepLearningFlappyBird": {
+    "text": "This repository implements a Deep Q-Network (DQN) algorithm to train an AI agent to play the Flappy Bird game using deep reinforcement learning techniques on raw pixel inputs.",
+    "generated_at": "2025-03-01T22:29:48.389994",
+    "repo_type": "fork"
+  },
+  "notebooks": {
+    "text": "This repository offers computer vision tutorials for training state-of-the-art models like YOLOv12, Qwen2.5-VL, PaliGemma 2, and SAM 2.1 on various tasks such as object detection, segmentation, data extraction, and OCR.",
+    "generated_at": "2025-03-01T22:29:53.385692",
+    "repo_type": "fork"
+  },
+  "inference": {
+    "text": "Inference turns any device into an AI-powered computer vision hub, allowing you to self-host models, build composable workflows, connect to video streams, integrate with external systems, and deploy production-ready CV applications.",
+    "generated_at": "2025-03-01T22:29:57.859927",
+    "repo_type": "fork"
   }
 }

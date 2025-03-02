@@ -1,22 +1,6 @@
 #!/usr/bin/env python3
 """
-github_to_readme.py
--------------------
-A 3-step process to update your GitHub README.md with Claude-generated descriptions
-while preserving your personal bio and other sections:
-
-1. Fetch GitHub Data: Get repo info and README content from GitHub API
-2. Generate Descriptions: Send to Claude for processing, save permanent records
-3. Update README.md: Update only the repo description sections of your README.md
-
-Requirements:
-- Python 3.6+
-- requests
-- python-dotenv (optional, for .env file)
-
-Set environment variables:
-- GITHUB_TOKEN: Your GitHub personal access token
-- CLAUDE_API_KEY: Your Anthropic Claude API key
+github_to_readme.py - Lists your 10 most recent GitHub repositories with Claude-generated descriptions
 """
 
 import os
@@ -24,66 +8,77 @@ import json
 import time
 import requests
 import re
+import pathlib
 from datetime import datetime
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
-# Configuration
 GITHUB_USERNAME = "davidatoms"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 CLAUDE_API_KEY = os.getenv("CLAUDE_API_KEY")
-MAX_REPOS = 10  # Maximum repos to process
+MAX_REPOS = 10  
 
-# File paths
-DATA_DIRECTORY = "github_data"
-GITHUB_DATA_FILE = f"{DATA_DIRECTORY}/github_repos.json"
-CLAUDE_DESCRIPTIONS_FILE = f"{DATA_DIRECTORY}/claude_descriptions.json"
-README_FILE = "README.md"
+root = pathlib.Path(__file__).parent.parent.parent.resolve()  # Go up to repo root
+DATA_DIRECTORY = root / "github_data"
+GITHUB_DATA_FILE = DATA_DIRECTORY / "github_repos.json"
+CLAUDE_DESCRIPTIONS_FILE = DATA_DIRECTORY / "claude_descriptions.json"
+README_FILE = root / "README.md"
 
 # Ensure data directory exists
 os.makedirs(DATA_DIRECTORY, exist_ok=True)
 
-# --------------------------------------------------
-# STEP 1: Fetch GitHub Data
-# --------------------------------------------------
+def replace_chunk(content, marker, chunk, inline=False):
+    """
+    Replace text between markers in the README file
+    """
+    r = re.compile(
+        r"<!\-\- {} starts \-\->.*<!\-\- {} ends \-\->".format(marker, marker),
+        re.DOTALL,
+    )
+    if not inline:
+        chunk = "\n{}\n".format(chunk)
+    chunk = "<!-- {} starts -->{}<!-- {} ends -->".format(marker, chunk, marker)
+    return r.sub(chunk, content)
 
 def fetch_github_data():
     """
-    Get the latest 10 repos from GitHub and save them.
+    Fetch the ten most recent repositories from GitHub API and save to a JSON file.
+    Returns a list of repos with their details.
     """
-    print("Getting GitHub repos...")
+    print("STEP 1: Fetching GitHub repository data...")
     
-    headers = {}
-    if GITHUB_TOKEN:
-        headers = {"Authorization": f"token {GITHUB_TOKEN}"}
+    headers = {"Authorization": f"token {GITHUB_TOKEN}"} if GITHUB_TOKEN else {}
     
-    url = f"https://api.github.com/users/{GITHUB_USERNAME}/repos?sort=updated&per_page=10"
+    # Get user's repositories sorted by update time
+    url = f"https://api.github.com/users/{GITHUB_USERNAME}/repos?sort=updated&per_page={MAX_REPOS}"
     response = requests.get(url, headers=headers)
     
     if response.status_code != 200:
-        print("Error getting repos:", response.status_code, response.text)
-        return {}
+        print(f"Error fetching repos: {response.status_code} - {response.text}")
+        return []
     
-    repos = response.json()
+    all_repos = response.json()
     
+    # Process the most recent repos
     repos_to_process = []
-    for repo in repos:
-        repo_info = {
+    
+    for repo in all_repos:
+        repos_to_process.append({
             "name": repo["name"],
             "url": repo["html_url"],
             "description": repo["description"],
             "type": "original" if not repo["fork"] else "fork",
+            "updated_at": repo["updated_at"],
             "readme": fetch_readme(repo["name"], headers)
-        }
-        repos_to_process.append(repo_info)
+        })
     
-    with open(GITHUB_DATA_FILE, 'w') as f:
+    # Save the data to a permanent JSON file
+    with open(GITHUB_DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(repos_to_process, f, indent=2)
     
-    print("Saved GitHub data to file")
-    print("Processed", len(repos_to_process), "repos")
+    print(f"GitHub data saved to {GITHUB_DATA_FILE}")
+    print(f"  - {len(repos_to_process)} repositories processed")
     
     return repos_to_process
 
@@ -101,10 +96,6 @@ def fetch_readme(repo_name, headers):
             print(f"Error decoding README for {repo_name}: {e}")
     
     return ""
-
-# --------------------------------------------------
-# STEP 2: Generate Descriptions with Claude
-# --------------------------------------------------
 
 def generate_descriptions(repos):
     """
@@ -140,7 +131,6 @@ def generate_descriptions(repos):
         
         print(f"Processing {i+1}/{len(repos)}: {repo_name}")
         
-        # Use the same prompt for all repos
         description = get_claude_description(
             repo_name, 
             repo["readme"], 
@@ -247,11 +237,7 @@ Avoid phrases like "This repository contains" or "This is a".
     
     return None
 
-# --------------------------------------------------
-# STEP 3: Update README.md
-# --------------------------------------------------
-
-def update_readme(github_data, descriptions):
+def update_readme(repos, descriptions):
     """
     Update the README.md file with repository descriptions
     while preserving your personal bio and other sections.
@@ -259,120 +245,40 @@ def update_readme(github_data, descriptions):
     print("\nSTEP 3: Updating README.md...")
     
     if not os.path.exists(README_FILE):
-        print(f"ERROR: {README_FILE} not found. Creating a new one.")
-        create_new_readme(github_data, descriptions)
+        print(f"ERROR: {README_FILE} not found.")
         return
     
     # Read existing README
     with open(README_FILE, 'r', encoding='utf-8') as f:
         readme_content = f.read()
     
-    # Prepare a single list of all repos
-    all_repos = []
+    # Format repositories list
+    repos_md = "\n\n".join([
+        f"[**{repo['name']}**]({repo['url']}) - {descriptions[repo['name']]['text']}"
+        for repo in repos 
+        if repo['name'] in descriptions
+    ])
     
-    # Use the github_data list to keep the original sorting (most recent first)
-    for repo in github_data:
-        repo_name = repo["name"]
-        if repo_name in descriptions:
-            all_repos.append((repo_name, repo["url"], descriptions[repo_name]["text"], descriptions[repo_name]["repo_type"]))
+    # Update the repositories section
+    updated_content = replace_chunk(readme_content, "recent_repos", repos_md)
     
-    # Generate the combined section with all repos
-    combined_section = ""
-    for i, (repo_name, repo_url, desc, repo_type) in enumerate(all_repos):
-        combined_section += f"- [{repo_name}]({repo_url}) - <!-- CLAUDE_DESCRIPTION{i+1}_START -->{desc}<!-- CLAUDE_DESCRIPTION{i+1}_END -->\n"
-    
-    # Update the PROJECTS-LIST section with all repos
-    projects_pattern = re.compile(r'(<!-- PROJECTS-LIST:START -->).*?(<!-- PROJECTS-LIST:END -->)', re.DOTALL)
-    readme_content = projects_pattern.sub(f'\\1 \n{combined_section}\\2', readme_content)
-    
-    # Remove the RECENT_FORKED_REPOS section if not needed anymore
-    if "<!-- RECENT_FORKED_REPOS:START -->" in readme_content:
-        forks_pattern = re.compile(r'(<!-- RECENT_FORKED_REPOS:START -->).*?(<!-- RECENT_FORKED_REPOS:END -->)', re.DOTALL)
-        # Replace with empty content between the markers
-        readme_content = forks_pattern.sub('\\1 \n\\2', readme_content)
-    
-    # Update the LAST_UPDATED section if it exists
-    last_updated = datetime.now().strftime('%B %d, %Y at %H:%M')
-    day_of_year = datetime.now().timetuple().tm_yday
+    # Update the last updated section
+    now = datetime.now()
+    last_updated = now.strftime('%B %d, %Y at %H:%M')
+    day_of_year = now.timetuple().tm_yday
     year_progress = round(day_of_year / 365, 3)
-    
-    updated_pattern = re.compile(r'(<!-- LAST_UPDATED:START -->).*?(<!-- LAST_UPDATED:END -->)', re.DOTALL)
-    readme_content = updated_pattern.sub(f'\\1 {last_updated} ({day_of_year}/365 ({year_progress}) of the year) \\2', readme_content)
+    updated_content = replace_chunk(
+        updated_content, 
+        "last_updated", 
+        f"{last_updated} ({day_of_year}/365 ({year_progress}) of the year)",
+        inline=True
+    )
     
     # Write updated README
     with open(README_FILE, 'w', encoding='utf-8') as f:
-        f.write(readme_content)
+        f.write(updated_content)
     
     print(f"README.md updated successfully with new descriptions.")
-
-def create_new_readme(github_data, descriptions):
-    """Create a new README.md file if none exists"""
-    # Create one combined list of repos
-    all_repos = []
-    for repo in github_data:
-        repo_name = repo["name"]
-        if repo_name in descriptions:
-            all_repos.append((repo_name, repo["url"], descriptions[repo_name]["text"]))
-    
-    last_updated = datetime.now().strftime('%B %d, %Y at %H:%M')
-    day_of_year = datetime.now().timetuple().tm_yday
-    year_progress = round(day_of_year / 365, 3)
-    
-    # Generate combined section
-    combined_section = ""
-    for i, (repo_name, repo_url, desc) in enumerate(all_repos):
-        combined_section += f"- [{repo_name}]({repo_url}) - <!-- CLAUDE_DESCRIPTION{i+1}_START -->{desc}<!-- CLAUDE_DESCRIPTION{i+1}_END -->\n"
-    
-    # Create README content with preserved bio
-    readme_content = f"""# {GITHUB_USERNAME}'s GitHub Readme
-
-<p align="left"><b>Last Updated:</b> <!-- LAST_UPDATED:START --> {last_updated} ({day_of_year}/365 ({year_progress}) of the year) <!-- LAST_UPDATED:END --></p>
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" />
-  <img src="https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white" />
-</p>
-
-I am interested in how technology pushes the frontier of human possibility and in making life a little better for both now and the future. If you're interested in supporting, feel free to buy me a book from **The King's English**.
-
-## Recent Repositories
-
-<!-- PROJECTS-LIST:START --> 
-{combined_section}<!-- PROJECTS-LIST:END -->
-
-_Project descriptions generated by Anthropic's Claude, backed by GitHub Actions_
-
----
-
-## How This Works
-
-This README is automatically updated using:
-
-1. **GitHub API Integration**  
-   - Fetches repository information and README content.
-
-2. **Anthropic's Claude Integration**  
-   - Sends README content to Claude to generate short, concise project descriptions.
-
-3. **Automated Updates**  
-   - Updates this README.md with the latest repositories and descriptions.
-   - Last updated on {last_updated}.
-
----
-"""
-    
-    # Write new README
-    with open(README_FILE, 'w', encoding='utf-8') as f:
-        f.write(readme_content)
-    
-    print(f"New {README_FILE} created successfully with your bio preserved.")
-
-# --------------------------------------------------
-# Main Function
-# --------------------------------------------------
 
 def main():
     """Run the complete process"""
