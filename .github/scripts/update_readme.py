@@ -290,25 +290,36 @@ def update_readme(github_data, descriptions):
     with open(README_FILE, 'r', encoding='utf-8') as f:
         readme_content = f.read()
     
-    # Separate repos by type
-    original_repos = [repo for repo in github_data if repo["type"] == "original"]
-    forked_repos = [repo for repo in github_data if repo["type"] == "fork"]
+    # We'll modify how repositories are filtered to ensure we're using the correct information
+    # First, get all repos by type from the descriptions dict
+    original_repos = []
+    forked_repos = []
+    
+    # Use the descriptions dictionary to categorize repos
+    for repo_name, repo_info in descriptions.items():
+        if repo_info["repo_type"] == "original":
+            # Find matching repo data from github_data
+            repo_data = next((repo for repo in github_data if repo["name"] == repo_name), None)
+            if repo_data:
+                original_repos.append((repo_name, repo_data["url"], repo_info["text"]))
+        elif repo_info["repo_type"] == "fork":
+            # Find matching repo data from github_data
+            repo_data = next((repo for repo in github_data if repo["name"] == repo_name), None)
+            if repo_data:
+                forked_repos.append((repo_name, repo_data["url"], repo_info["text"]))
+    
+    # Sort repos by their order in the descriptions dict to maintain order
+    # (or alternatively, you could sort by another criterion like update time)
     
     # Update original projects section
     original_section = ""
-    for i, repo in enumerate(original_repos):
-        repo_name = repo["name"]
-        if repo_name in descriptions:
-            desc = descriptions[repo_name]["text"]
-            original_section += f"- [{repo_name}]({repo['url']}) - <!-- CLAUDE_DESCRIPTION{i+1}_START -->{desc}<!-- CLAUDE_DESCRIPTION{i+1}_END -->\n"
+    for i, (repo_name, repo_url, desc) in enumerate(original_repos):
+        original_section += f"- [{repo_name}]({repo_url}) - <!-- CLAUDE_DESCRIPTION{i+1}_START -->{desc}<!-- CLAUDE_DESCRIPTION{i+1}_END -->\n"
     
     # Update forked projects section
     forked_section = ""
-    for repo in forked_repos:
-        repo_name = repo["name"]
-        if repo_name in descriptions:
-            desc = descriptions[repo_name]["text"]
-            forked_section += f"- [{repo_name}]({repo['url']}) - {desc}\n"
+    for repo_name, repo_url, desc in forked_repos:
+        forked_section += f"- [{repo_name}]({repo_url}) - {desc}\n"
     
     # Update the PROJECTS-LIST section
     projects_pattern = re.compile(r'(<!-- PROJECTS-LIST:START -->).*?(<!-- PROJECTS-LIST:END -->)', re.DOTALL)
