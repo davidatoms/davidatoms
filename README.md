@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->March 01, 2025 at 22:29 (60/365 (0.164) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->March 28, 2025 at 17:28 (87/365 (0.238) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -12,29 +12,29 @@
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white" />
 </p>
 
-I am passionate about a better tomorrow through innovation and investments. 
+I am passionate about a better future through innovation and investments. 
 
 ## Recent Repositories
 <!-- recent_repos starts -->
-[**davidatoms**](https://github.com/davidatoms/davidatoms) - David Adams' personal repository showcasing his projects, coding samples, and professional profile.
+[**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
 
-[**jupyter_tool**](https://github.com/davidatoms/jupyter_tool) - The jupyter_tool repository provides Python tools for programmatically creating, loading, and manipulating Jupyter notebooks, enabling AI agents to interact with notebook content.
+[**dynamo**](https://github.com/davidatoms/dynamo) - NVIDIA Dynamo is a high-performance distributed inference framework designed for serving large language models, enabling disaggregated prefill & decode operations, dynamic GPU scheduling, and optimized data transfers.
 
-[**fabric**](https://github.com/davidatoms/fabric) - `fabric` is an open-source framework that augments humans using AI by breaking down problems into components and applying customizable AI prompts (called Patterns) to each component.
+[**SpikeStream**](https://github.com/davidatoms/SpikeStream) - SpikeStream is a visualization tool showcasing brain-inspired spiking neural networks as seen on the Cortical Labs website and YouTube channel.
 
-[**buster**](https://github.com/davidatoms/buster) - Buster is a modern analytics platform built from the ground up with AI in mind, offering a data warehouse and BI tools to enable powerful, self-serve experiences.
+[**Doctor-Dignity**](https://github.com/davidatoms/Doctor-Dignity) - Doctor Dignity is an open-source project aiming to provide personalized medical assistance through a locally hosted, privacy-preserving large language model fine-tuned on medical data.
 
-[**gnome-calendar**](https://github.com/davidatoms/gnome-calendar) - GNOME Calendar is a simple and beautifully designed calendar application for the GNOME desktop environment, focusing on attention to detail and design.
+[**hugo-website**](https://github.com/davidatoms/hugo-website) - A Hugo template tailored for minimalist academic websites, featuring the PaperMod theme, GitHub Pages deployment, and additional customizations for optimal performance across devices.
 
-[**supervision**](https://github.com/davidatoms/supervision) - Supervision is an open-source Python library providing reusable computer vision tools for loading datasets, visualizing detections, and integrating with popular models and libraries.
+[**jupyter_tool**](https://github.com/davidatoms/jupyter_tool) - A Python package for programmatically creating, loading, and manipulating Jupyter notebooks, enabling integration into AI agents and workflows.
 
-[**microeconomic-modeling**](https://github.com/davidatoms/microeconomic-modeling) - This repository models various companies' cost, revenue, and profit functions using mathematical economic principles, aiming to forecast financial metrics and analyze strategic decisions.
+[**fabric**](https://github.com/davidatoms/fabric) - `fabric` is an open-source AI framework that helps integrate AI capabilities into everyday tasks and workflows through reusable prompt patterns.
 
-[**DeepLearningFlappyBird**](https://github.com/davidatoms/DeepLearningFlappyBird) - This repository implements a Deep Q-Network (DQN) algorithm to train an AI agent to play the Flappy Bird game using deep reinforcement learning techniques on raw pixel inputs.
+[**buster**](https://github.com/davidatoms/buster) - Buster is an AI-powered analytics platform that provides a modern data warehousing solution and a self-serve business intelligence platform for building data applications.
 
-[**notebooks**](https://github.com/davidatoms/notebooks) - This repository offers computer vision tutorials for training state-of-the-art models like YOLOv12, Qwen2.5-VL, PaliGemma 2, and SAM 2.1 on various tasks such as object detection, segmentation, data extraction, and OCR.
+[**gnome-calendar**](https://github.com/davidatoms/gnome-calendar) - GNOME Calendar is an elegant and user-friendly calendar application designed for the GNOME desktop environment, with a strong emphasis on attention to detail and design.
 
-[**inference**](https://github.com/davidatoms/inference) - Inference turns any device into an AI-powered computer vision hub, allowing you to self-host models, build composable workflows, connect to video streams, integrate with external systems, and deploy production-ready CV applications.
+[**supervision**](https://github.com/davidatoms/supervision) - Supervision is an open-source Python library that provides reusable tools for computer vision tasks like object detection, segmentation, and visualization, enabling developers to build robust applications more efficiently.
 <!-- recent_repos ends -->
 
 _Project descriptions generated by Anthropic's Claude, backed by GitHub Actions_

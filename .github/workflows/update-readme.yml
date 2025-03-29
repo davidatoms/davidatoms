@@ -26,9 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run update_readme.py
+      - name: Run update script
         run: python .github/scripts/update_readme.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           README_GITHUB_TOKEN: ${{ secrets.README_GITHUB_TOKEN }}
           CLAUDE_API_KEY: ${{ secrets.README_CLAUDE_KEY }} 

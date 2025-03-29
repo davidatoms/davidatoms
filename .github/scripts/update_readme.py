@@ -11,12 +11,13 @@ import re
 import pathlib
 from datetime import datetime
 from dotenv import load_dotenv
+from python_graphql_client import GraphqlClient
 
 load_dotenv()
 
 GITHUB_USERNAME = "davidatoms"
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-CLAUDE_API_KEY = os.getenv("CLAUDE_API_KEY")
+GITHUB_TOKEN = os.getenv("README_GITHUB_TOKEN")
+CLAUDE_API_KEY = os.getenv("README_CLAUDE_KEY")
 MAX_REPOS = 10  
 
 root = pathlib.Path(__file__).parent.parent.parent.resolve()  # Go up to repo root
@@ -27,6 +28,15 @@ README_FILE = root / "README.md"
 
 # Ensure data directory exists
 os.makedirs(DATA_DIRECTORY, exist_ok=True)
+
+# Add this new GraphQL client setup
+client = GraphqlClient(endpoint="https://api.github.com/graphql")
+
+# Add these debug lines
+print("Debug token info:")
+print(f"Token found: {'Yes' if GITHUB_TOKEN else 'No'}")
+print(f"Token length: {len(GITHUB_TOKEN) if GITHUB_TOKEN else 0}")
+print(f"Token starts with: {GITHUB_TOKEN[:7] if GITHUB_TOKEN else 'None'}...")
 
 def replace_chunk(content, marker, chunk, inline=False):
     """
@@ -43,44 +53,65 @@ def replace_chunk(content, marker, chunk, inline=False):
 
 def fetch_github_data():
     """
-    Fetch the ten most recent repositories from GitHub API and save to a JSON file.
-    Returns a list of repos with their details.
+    Fetch the ten most recent repositories using GraphQL
     """
     print("STEP 1: Fetching GitHub repository data...")
     
-    headers = {"Authorization": f"token {GITHUB_TOKEN}"} if GITHUB_TOKEN else {}
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github.v4+json"
+    }
     
-    # Get user's repositories sorted by update time
-    url = f"https://api.github.com/users/{GITHUB_USERNAME}/repos?sort=updated&per_page={MAX_REPOS}"
-    response = requests.get(url, headers=headers)
+    query = """
+    query {
+      user(login: "davidatoms") {
+        repositories(first: 10, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC}) {
+          nodes {
+            name
+            url
+            description
+            isPrivate
+            isFork
+            updatedAt
+            object(expression: "HEAD:README.md") {
+              ... on Blob {
+                text
+              }
+            }
+          }
+        }
+      }
+    }
+    """
     
-    if response.status_code != 200:
-        print(f"Error fetching repos: {response.status_code} - {response.text}")
+    try:
+        response = client.execute(query=query, headers=headers)
+        repos = response["data"]["user"]["repositories"]["nodes"]
+        
+        repos_to_process = []
+        for repo in repos:
+            if not repo["isPrivate"]:  # Skip private repos
+                repos_to_process.append({
+                    "name": repo["name"],
+                    "url": repo["url"],
+                    "description": repo["description"],
+                    "type": "fork" if repo["isFork"] else "original",
+                    "updated_at": repo["updatedAt"],
+                    "readme": repo["object"]["text"] if repo["object"] else ""
+                })
+        
+        # Save the data
+        with open(GITHUB_DATA_FILE, 'w', encoding='utf-8') as f:
+            json.dump(repos_to_process, f, indent=2)
+        
+        print(f"GitHub data saved to {GITHUB_DATA_FILE}")
+        print(f"  - {len(repos_to_process)} repositories processed")
+        
+        return repos_to_process
+        
+    except Exception as e:
+        print(f"Error fetching repos: {e}")
         return []
-    
-    all_repos = response.json()
-    
-    # Process the most recent repos
-    repos_to_process = []
-    
-    for repo in all_repos:
-        repos_to_process.append({
-            "name": repo["name"],
-            "url": repo["html_url"],
-            "description": repo["description"],
-            "type": "original" if not repo["fork"] else "fork",
-            "updated_at": repo["updated_at"],
-            "readme": fetch_readme(repo["name"], headers)
-        })
-    
-    # Save the data to a permanent JSON file
-    with open(GITHUB_DATA_FILE, 'w', encoding='utf-8') as f:
-        json.dump(repos_to_process, f, indent=2)
-    
-    print(f"GitHub data saved to {GITHUB_DATA_FILE}")
-    print(f"  - {len(repos_to_process)} repositories processed")
-    
-    return repos_to_process
 
 def fetch_readme(repo_name, headers):
     """Fetch README content for a repository"""
