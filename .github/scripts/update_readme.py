@@ -18,19 +18,19 @@ import sys
 
 # Get environment variables directly
 GITHUB_USERNAME = "davidatoms"
-GITHUB_TOKEN = os.environ.get("README_GITHUB_TOKEN")  # Changed from os.getenv()
-CLAUDE_API_KEY = os.environ.get("README_CLAUDE_KEY")  # Changed from os.getenv()
+GITHUB_TOKEN = os.environ.get("README_GITHUB_TOKEN")
+CLAUDE_API_KEY = os.environ.get("README_CLAUDE_TOKEN")  # Changed to match your secret name
 
 # Add validation
 if not GITHUB_TOKEN:
     raise ValueError("README_GITHUB_TOKEN is not set in environment")
 if not CLAUDE_API_KEY:
-    raise ValueError("README_CLAUDE_KEY is not set in environment")
+    raise ValueError("README_CLAUDE_TOKEN is not set in environment")
 
 # Debug prints
 print("\nEnvironment Check:")
 print(f"GitHub Token present: {'Yes' if GITHUB_TOKEN else 'No'}")
-print(f"Claude Key present: {'Yes' if CLAUDE_API_KEY else 'No'}")
+print(f"Claude Token present: {'Yes' if CLAUDE_API_KEY else 'No'}")
 
 MAX_REPOS = 10  
 
@@ -45,12 +45,6 @@ os.makedirs(DATA_DIRECTORY, exist_ok=True)
 
 # Add this new GraphQL client setup
 client = GraphqlClient(endpoint="https://api.github.com/graphql")
-
-# Add these debug lines
-print("Debug token info:")
-print(f"Token found: {'Yes' if GITHUB_TOKEN else 'No'}")
-print(f"Token length: {len(GITHUB_TOKEN) if GITHUB_TOKEN else 0}")
-print(f"Token starts with: {GITHUB_TOKEN[:7] if GITHUB_TOKEN else 'None'}...")
 
 def replace_chunk(content, marker, chunk, inline=False):
     """
