@@ -53,5 +53,10 @@
     "text": "LangChain is a framework for building LLM-powered applications, enabling developers to chain together interoperable components and integrations, simplifying AI application development while future-proofing decisions as the underlying technology evolves.",
     "generated_at": "2025-03-28T18:42:42.049283",
     "repo_type": "fork"
+  },
+  "mlfrm": {
+    "text": "This repository offers Python code and Jupyter Notebooks companion to the O'Reilly book \"Machine Learning for Financial Risk Management with Python.\"",
+    "generated_at": "2025-03-29T01:38:55.213248",
+    "repo_type": "fork"
   }
 }
