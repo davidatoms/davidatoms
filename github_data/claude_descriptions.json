@@ -48,5 +48,10 @@
     "text": "Supervision is an open-source Python library that provides reusable tools for computer vision tasks like object detection, segmentation, and visualization, enabling developers to build robust applications more efficiently.",
     "generated_at": "2025-03-28T17:28:06.332890",
     "repo_type": "fork"
+  },
+  "langchain": {
+    "text": "LangChain is a framework for building LLM-powered applications, enabling developers to chain together interoperable components and integrations, simplifying AI application development while future-proofing decisions as the underlying technology evolves.",
+    "generated_at": "2025-03-28T18:42:42.049283",
+    "repo_type": "fork"
   }
 }

@@ -12,12 +12,13 @@ import pathlib
 from datetime import datetime
 from dotenv import load_dotenv
 from python_graphql_client import GraphqlClient
+import sys
 
 load_dotenv()
 
 GITHUB_USERNAME = "davidatoms"
 GITHUB_TOKEN = os.getenv("README_GITHUB_TOKEN")
-CLAUDE_API_KEY = os.getenv("README_CLAUDE_KEY")
+CLAUDE_API_KEY = os.getenv("README_CLAUDE_TOKEN")
 MAX_REPOS = 10  
 
 root = pathlib.Path(__file__).parent.parent.parent.resolve()  # Go up to repo root
@@ -236,7 +237,7 @@ Avoid phrases like "This repository contains" or "This is a".
     # Add retry logic with exponential backoff
     max_retries = 3
     retry_count = 0
-    retry_delay = 5  # Start with 5 seconds
+    retry_delay = 5  
     
     while retry_count < max_retries:
         try:
