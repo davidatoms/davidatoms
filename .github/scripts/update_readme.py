@@ -10,15 +10,28 @@ import requests
 import re
 import pathlib
 from datetime import datetime
-from dotenv import load_dotenv
 from python_graphql_client import GraphqlClient
 import sys
 
-load_dotenv()
+# Remove or modify this section
+# load_dotenv()  # We'll make this conditional
 
+# Get environment variables directly
 GITHUB_USERNAME = "davidatoms"
-GITHUB_TOKEN = os.getenv("README_GITHUB_TOKEN")
-CLAUDE_API_KEY = os.getenv("README_CLAUDE_TOKEN")
+GITHUB_TOKEN = os.environ.get("README_GITHUB_TOKEN")  # Changed from os.getenv()
+CLAUDE_API_KEY = os.environ.get("README_CLAUDE_KEY")  # Changed from os.getenv()
+
+# Add validation
+if not GITHUB_TOKEN:
+    raise ValueError("README_GITHUB_TOKEN is not set in environment")
+if not CLAUDE_API_KEY:
+    raise ValueError("README_CLAUDE_KEY is not set in environment")
+
+# Debug prints
+print("\nEnvironment Check:")
+print(f"GitHub Token present: {'Yes' if GITHUB_TOKEN else 'No'}")
+print(f"Claude Key present: {'Yes' if CLAUDE_API_KEY else 'No'}")
+
 MAX_REPOS = 10  
 
 root = pathlib.Path(__file__).parent.parent.parent.resolve()  # Go up to repo root
