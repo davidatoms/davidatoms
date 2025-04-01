@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->March 29, 2025 at 01:38 (88/365 (0.241) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->April 01, 2025 at 12:01 (91/365 (0.249) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -15,9 +15,9 @@ I am passionate about a better future through innovation and investments.
 
 ## Recent Repositories
 <!-- recent_repos starts -->
-[**mlfrm**](https://github.com/davidatoms/mlfrm) - This repository offers Python code and Jupyter Notebooks companion to the O'Reilly book "Machine Learning for Financial Risk Management with Python."
-
 [**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
+
+[**mlfrm**](https://github.com/davidatoms/mlfrm) - This repository offers Python code and Jupyter Notebooks companion to the O'Reilly book "Machine Learning for Financial Risk Management with Python."
 
 [**langchain**](https://github.com/davidatoms/langchain) - LangChain is a framework for building LLM-powered applications, enabling developers to chain together interoperable components and integrations, simplifying AI application development while future-proofing decisions as the underlying technology evolves.
 
