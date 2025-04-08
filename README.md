@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->April 01, 2025 at 12:01 (91/365 (0.249) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->April 08, 2025 at 12:02 (98/365 (0.268) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -17,6 +17,8 @@ I am passionate about a better future through innovation and investments.
 <!-- recent_repos starts -->
 [**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
 
+[**healthcare-shared-components**](https://github.com/davidatoms/healthcare-shared-components) - This repository hosts shared components used by Microsoft Health Care services, such as FHIR Server for Azure, IoMT FHIR Connector, and Medical Imaging Server for DICOM.
+
 [**mlfrm**](https://github.com/davidatoms/mlfrm) - This repository offers Python code and Jupyter Notebooks companion to the O'Reilly book "Machine Learning for Financial Risk Management with Python."
 
 [**langchain**](https://github.com/davidatoms/langchain) - LangChain is a framework for building LLM-powered applications, enabling developers to chain together interoperable components and integrations, simplifying AI application development while future-proofing decisions as the underlying technology evolves.
@@ -32,8 +34,6 @@ I am passionate about a better future through innovation and investments.
 [**jupyter_tool**](https://github.com/davidatoms/jupyter_tool) - A Python package for programmatically creating, loading, and manipulating Jupyter notebooks, enabling integration into AI agents and workflows.
 
 [**fabric**](https://github.com/davidatoms/fabric) - `fabric` is an open-source AI framework that helps integrate AI capabilities into everyday tasks and workflows through reusable prompt patterns.
-
-[**buster**](https://github.com/davidatoms/buster) - Buster is an AI-powered analytics platform that provides a modern data warehousing solution and a self-serve business intelligence platform for building data applications.
 <!-- recent_repos ends -->
 
 <br>

@@ -58,5 +58,10 @@
     "text": "This repository offers Python code and Jupyter Notebooks companion to the O'Reilly book \"Machine Learning for Financial Risk Management with Python.\"",
     "generated_at": "2025-03-29T01:38:55.213248",
     "repo_type": "fork"
+  },
+  "healthcare-shared-components": {
+    "text": "This repository hosts shared components used by Microsoft Health Care services, such as FHIR Server for Azure, IoMT FHIR Connector, and Medical Imaging Server for DICOM.",
+    "generated_at": "2025-04-08T12:01:59.389380",
+    "repo_type": "fork"
   }
 }
