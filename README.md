@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->April 08, 2025 at 12:02 (98/365 (0.268) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->April 15, 2025 at 12:02 (105/365 (0.288) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -15,6 +15,18 @@ I am passionate about a better future through innovation and investments.
 
 ## Recent Repositories
 <!-- recent_repos starts -->
+[**openbb**](https://github.com/davidatoms/openbb) - The OpenBB Platform is a free and open-source financial platform offering access to equity, options, crypto, forex, macro economy, fixed income, and more, along with a range of extensions for enhanced user experience.
+
+[**transformerlab-app**](https://github.com/davidatoms/transformerlab-app) - Transformer Lab is an open-source toolkit that allows users to train, tune, and chat with large language models on their own machine, providing a user-friendly interface and a wide range of features.
+
+[**OpenGlass**](https://github.com/davidatoms/OpenGlass) - OpenGlass turns regular glasses into smart glasses using an affordable microcontroller and open-source software, enabling features like object recognition, translation, and life recording.
+
+[**omi**](https://github.com/davidatoms/omi) - Omi is an open-source AI wearable that captures conversations, provides summaries, action items, and performs actions for you, offering automatic, high-quality transcriptions through a mobile app integration.
+
+[**vscode**](https://github.com/davidatoms/vscode) - Visual Studio Code is an open-source code editor developed by Microsoft, featuring comprehensive code editing, navigation, debugging, and an extensible architecture.
+
+[**DocumentServer**](https://github.com/davidatoms/DocumentServer) - ONLYOFFICE Docs is a free collaborative online office suite comprising viewers and editors for texts, spreadsheets and presentations, forms and PDF, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
+
 [**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
 
 [**healthcare-shared-components**](https://github.com/davidatoms/healthcare-shared-components) - This repository hosts shared components used by Microsoft Health Care services, such as FHIR Server for Azure, IoMT FHIR Connector, and Medical Imaging Server for DICOM.
@@ -22,18 +34,6 @@ I am passionate about a better future through innovation and investments.
 [**mlfrm**](https://github.com/davidatoms/mlfrm) - This repository offers Python code and Jupyter Notebooks companion to the O'Reilly book "Machine Learning for Financial Risk Management with Python."
 
 [**langchain**](https://github.com/davidatoms/langchain) - LangChain is a framework for building LLM-powered applications, enabling developers to chain together interoperable components and integrations, simplifying AI application development while future-proofing decisions as the underlying technology evolves.
-
-[**dynamo**](https://github.com/davidatoms/dynamo) - NVIDIA Dynamo is a high-performance distributed inference framework designed for serving large language models, enabling disaggregated prefill & decode operations, dynamic GPU scheduling, and optimized data transfers.
-
-[**SpikeStream**](https://github.com/davidatoms/SpikeStream) - SpikeStream is a visualization tool showcasing brain-inspired spiking neural networks as seen on the Cortical Labs website and YouTube channel.
-
-[**Doctor-Dignity**](https://github.com/davidatoms/Doctor-Dignity) - Doctor Dignity is an open-source project aiming to provide personalized medical assistance through a locally hosted, privacy-preserving large language model fine-tuned on medical data.
-
-[**hugo-website**](https://github.com/davidatoms/hugo-website) - A Hugo template tailored for minimalist academic websites, featuring the PaperMod theme, GitHub Pages deployment, and additional customizations for optimal performance across devices.
-
-[**jupyter_tool**](https://github.com/davidatoms/jupyter_tool) - A Python package for programmatically creating, loading, and manipulating Jupyter notebooks, enabling integration into AI agents and workflows.
-
-[**fabric**](https://github.com/davidatoms/fabric) - `fabric` is an open-source AI framework that helps integrate AI capabilities into everyday tasks and workflows through reusable prompt patterns.
 <!-- recent_repos ends -->
 
 <br>

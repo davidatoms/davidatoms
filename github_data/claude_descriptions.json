@@ -63,5 +63,36 @@
     "text": "This repository hosts shared components used by Microsoft Health Care services, such as FHIR Server for Azure, IoMT FHIR Connector, and Medical Imaging Server for DICOM.",
     "generated_at": "2025-04-08T12:01:59.389380",
     "repo_type": "fork"
+  },
+  "openbb": {
+    "text": "The OpenBB Platform is a free and open-source financial platform offering access to equity, options, crypto, forex, macro economy, fixed income, and more, along with a range of extensions for enhanced user experience.",
+    "generated_at": "2025-04-15T12:02:30.062448",
+    "repo_type": "fork"
+  },
+  "transformerlab-app": {
+    "text": "Transformer Lab is an open-source toolkit that allows users to train, tune, and chat with large language models on their own machine, providing a user-friendly interface and a wide range of features.",
+    "generated_at": "2025-04-15T12:02:34.117343",
+    "repo_type": "fork"
+  },
+  "OpenGlass": {
+    "text": "OpenGlass turns regular glasses into smart glasses using an affordable microcontroller and open-source software, enabling features like object recognition, translation, and life recording.",
+    "generated_at": "2025-04-15T12:02:37.559482",
+    "repo_type": "fork"
+  },
+  "omi": {
+    "text": "Omi is an open-source AI wearable that captures conversations, provides summaries, action items, and performs actions for you, offering automatic, high-quality transcriptions through a mobile app integration.",
+    "generated_at": "2025-04-15T12:02:41.541016",
+    "repo_type": "fork"
+  },
+  "vscode": {
+    "text": "Visual Studio Code is an open-source code editor developed by Microsoft, featuring comprehensive code editing, navigation, debugging, and an extensible architecture.",
+    "generated_at": "2025-04-15T12:02:44.897001",
+    "repo_type": "fork"
+  },
+  "DocumentServer": {
+    "text": "ONLYOFFICE Docs is a free collaborative online office suite comprising viewers and editors for texts, spreadsheets and presentations, forms and PDF, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.",
+    "generated_at": "2025-04-15T12:02:46.897466",
+    "repo_type": "fork",
+    "is_fallback": true
   }
 }
