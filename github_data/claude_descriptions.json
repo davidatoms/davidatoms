@@ -94,5 +94,10 @@
     "generated_at": "2025-04-15T12:02:46.897466",
     "repo_type": "fork",
     "is_fallback": true
+  },
+  "ndx-template": {
+    "text": "This repository provides a cookiecutter template for creating Neurodata Extensions (NDX) for the Neurodata Without Borders (NWB) data standard, allowing users to easily generate a project structure for developing NWB extensions in Python.",
+    "generated_at": "2025-04-22T12:02:05.828333",
+    "repo_type": "fork"
   }
 }
