@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->April 22, 2025 at 12:02 (112/365 (0.307) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->April 29, 2025 at 12:02 (119/365 (0.326) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -15,25 +15,25 @@ I am passionate about a better future through innovation and investments.
 
 ## Recent Repositories
 <!-- recent_repos starts -->
-[**ndx-template**](https://github.com/davidatoms/ndx-template) - This repository provides a cookiecutter template for creating Neurodata Extensions (NDX) for the Neurodata Without Borders (NWB) data standard, allowing users to easily generate a project structure for developing NWB extensions in Python.
+[**mlx-lm**](https://github.com/davidatoms/mlx-lm) - MLX LM is a Python package for generating text and fine-tuning large language models on Apple silicon with MLX, supporting Hugging Face models, quantization, and distributed inference/fine-tuning.
+
+[**paper2code**](https://github.com/davidatoms/paper2code) - PaperCoder is a multi-agent LLM system that transforms scientific papers into code repositories by following a planning, analysis, and code generation pipeline, automating the implementation process from research publications.
+
+[**system-prompts-and-models-of-ai-tools**](https://github.com/davidatoms/system-prompts-and-models-of-ai-tools) - This repository provides access to system prompts, tools, and AI models used by various AI companies, including FULL v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, and VSCode Agent, along with other open-sourced resources.
+
+[**pandas-ai**](https://github.com/davidatoms/pandas-ai) - PandaAI is a Python library that enables users to interact with data using natural language, allowing them to ask questions, generate visualizations, and perform data analysis tasks with ease.
+
+[**kalshi-starter-code-python**](https://github.com/davidatoms/kalshi-starter-code-python) - This repository provides example Python code to access API-authenticated endpoints on Kalshi.com, a platform for trading event contracts.
 
 [**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
+
+[**ndx-template**](https://github.com/davidatoms/ndx-template) - This repository provides a cookiecutter template for creating Neurodata Extensions (NDX) for the Neurodata Without Borders (NWB) data standard, allowing users to easily generate a project structure for developing NWB extensions in Python.
 
 [**openbb**](https://github.com/davidatoms/openbb) - The OpenBB Platform is a free and open-source financial platform offering access to equity, options, crypto, forex, macro economy, fixed income, and more, along with a range of extensions for enhanced user experience.
 
 [**transformerlab-app**](https://github.com/davidatoms/transformerlab-app) - Transformer Lab is an open-source toolkit that allows users to train, tune, and chat with large language models on their own machine, providing a user-friendly interface and a wide range of features.
 
 [**OpenGlass**](https://github.com/davidatoms/OpenGlass) - OpenGlass turns regular glasses into smart glasses using an affordable microcontroller and open-source software, enabling features like object recognition, translation, and life recording.
-
-[**omi**](https://github.com/davidatoms/omi) - Omi is an open-source AI wearable that captures conversations, provides summaries, action items, and performs actions for you, offering automatic, high-quality transcriptions through a mobile app integration.
-
-[**vscode**](https://github.com/davidatoms/vscode) - Visual Studio Code is an open-source code editor developed by Microsoft, featuring comprehensive code editing, navigation, debugging, and an extensible architecture.
-
-[**DocumentServer**](https://github.com/davidatoms/DocumentServer) - ONLYOFFICE Docs is a free collaborative online office suite comprising viewers and editors for texts, spreadsheets and presentations, forms and PDF, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
-
-[**healthcare-shared-components**](https://github.com/davidatoms/healthcare-shared-components) - This repository hosts shared components used by Microsoft Health Care services, such as FHIR Server for Azure, IoMT FHIR Connector, and Medical Imaging Server for DICOM.
-
-[**mlfrm**](https://github.com/davidatoms/mlfrm) - This repository offers Python code and Jupyter Notebooks companion to the O'Reilly book "Machine Learning for Financial Risk Management with Python."
 <!-- recent_repos ends -->
 
 <br>
