@@ -124,5 +124,50 @@
     "text": "This repository provides example Python code to access API-authenticated endpoints on Kalshi.com, a platform for trading event contracts.",
     "generated_at": "2025-04-29T12:02:26.773502",
     "repo_type": "fork"
+  },
+  "m474": {
+    "text": "M474 is an open-source tool that enhances network privacy and security by allowing users to change MAC addresses, randomize internal IP addresses, and renew IP addresses.",
+    "generated_at": "2025-05-06T12:02:10.406273",
+    "repo_type": "fork"
+  },
+  "goodfire-sdk": {
+    "text": "The goodfire-sdk is a Python library that enables shaping AI model behavior by directly controlling a model's internal features, allowing for precise output control and task customization.",
+    "generated_at": "2025-05-06T12:02:14.447263",
+    "repo_type": "fork"
+  },
+  "vscodium": {
+    "text": "VSCodium is a project that builds and distributes freely-licensed binaries of Microsoft's VS Code source code, with telemetry and proprietary components removed.",
+    "generated_at": "2025-05-06T12:02:18.236644",
+    "repo_type": "fork"
+  },
+  "accelerate": {
+    "text": "Accelerate is a lightweight PyTorch library that abstracts the boilerplate code for distributed training, enabling seamless execution of training scripts across various hardware setups like CPUs, GPUs, and TPUs.",
+    "generated_at": "2025-05-06T12:02:22.059604",
+    "repo_type": "fork"
+  },
+  "system-design": {
+    "text": "This repository serves as a comprehensive guide covering the fundamentals and practical aspects of system design, from networking concepts to design patterns and real-world system architectures.",
+    "generated_at": "2025-05-06T12:02:25.752837",
+    "repo_type": "fork"
+  },
+  "fingpt": {
+    "text": "FinGPT is an open-source project that provides financial large language models and benchmarks, enabling lightweight adaptation for applications like sentiment analysis and forecasting.",
+    "generated_at": "2025-05-06T12:02:29.688683",
+    "repo_type": "fork"
+  },
+  "deepwiki-open": {
+    "text": "DeepWiki is an AI-powered tool that automatically generates comprehensive wikis, visual diagrams, and intelligent Q&A for any GitHub or GitLab repository by analyzing its code structure.",
+    "generated_at": "2025-05-06T12:02:33.637705",
+    "repo_type": "fork"
+  },
+  "r1-interpretability": {
+    "text": "This repository provides open-source State Autoencoder (SAE) models for interpreting DeepSeek-R1, a large reasoning AI model, along with databases of activations and feature labels to enable further research on model interpretability and alignment.",
+    "generated_at": "2025-05-06T12:02:37.676203",
+    "repo_type": "fork"
+  },
+  "no-as-a-service": {
+    "text": "A lightweight API that returns random, witty rejection reasons for when you need to gracefully say \"no\".",
+    "generated_at": "2025-05-06T12:02:40.617569",
+    "repo_type": "fork"
   }
 }

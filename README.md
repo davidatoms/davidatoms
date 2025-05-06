@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->April 29, 2025 at 12:02 (119/365 (0.326) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->May 06, 2025 at 12:02 (126/365 (0.345) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -15,25 +15,25 @@ I am passionate about a better future through innovation and investments.
 
 ## Recent Repositories
 <!-- recent_repos starts -->
-[**mlx-lm**](https://github.com/davidatoms/mlx-lm) - MLX LM is a Python package for generating text and fine-tuning large language models on Apple silicon with MLX, supporting Hugging Face models, quantization, and distributed inference/fine-tuning.
+[**m474**](https://github.com/davidatoms/m474) - M474 is an open-source tool that enhances network privacy and security by allowing users to change MAC addresses, randomize internal IP addresses, and renew IP addresses.
 
-[**paper2code**](https://github.com/davidatoms/paper2code) - PaperCoder is a multi-agent LLM system that transforms scientific papers into code repositories by following a planning, analysis, and code generation pipeline, automating the implementation process from research publications.
+[**goodfire-sdk**](https://github.com/davidatoms/goodfire-sdk) - The goodfire-sdk is a Python library that enables shaping AI model behavior by directly controlling a model's internal features, allowing for precise output control and task customization.
 
-[**system-prompts-and-models-of-ai-tools**](https://github.com/davidatoms/system-prompts-and-models-of-ai-tools) - This repository provides access to system prompts, tools, and AI models used by various AI companies, including FULL v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, and VSCode Agent, along with other open-sourced resources.
+[**vscodium**](https://github.com/davidatoms/vscodium) - VSCodium is a project that builds and distributes freely-licensed binaries of Microsoft's VS Code source code, with telemetry and proprietary components removed.
 
-[**pandas-ai**](https://github.com/davidatoms/pandas-ai) - PandaAI is a Python library that enables users to interact with data using natural language, allowing them to ask questions, generate visualizations, and perform data analysis tasks with ease.
+[**accelerate**](https://github.com/davidatoms/accelerate) - Accelerate is a lightweight PyTorch library that abstracts the boilerplate code for distributed training, enabling seamless execution of training scripts across various hardware setups like CPUs, GPUs, and TPUs.
 
-[**kalshi-starter-code-python**](https://github.com/davidatoms/kalshi-starter-code-python) - This repository provides example Python code to access API-authenticated endpoints on Kalshi.com, a platform for trading event contracts.
+[**system-design**](https://github.com/davidatoms/system-design) - This repository serves as a comprehensive guide covering the fundamentals and practical aspects of system design, from networking concepts to design patterns and real-world system architectures.
+
+[**fingpt**](https://github.com/davidatoms/fingpt) - FinGPT is an open-source project that provides financial large language models and benchmarks, enabling lightweight adaptation for applications like sentiment analysis and forecasting.
+
+[**deepwiki-open**](https://github.com/davidatoms/deepwiki-open) - DeepWiki is an AI-powered tool that automatically generates comprehensive wikis, visual diagrams, and intelligent Q&A for any GitHub or GitLab repository by analyzing its code structure.
+
+[**r1-interpretability**](https://github.com/davidatoms/r1-interpretability) - This repository provides open-source State Autoencoder (SAE) models for interpreting DeepSeek-R1, a large reasoning AI model, along with databases of activations and feature labels to enable further research on model interpretability and alignment.
+
+[**no-as-a-service**](https://github.com/davidatoms/no-as-a-service) - A lightweight API that returns random, witty rejection reasons for when you need to gracefully say "no".
 
 [**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
-
-[**ndx-template**](https://github.com/davidatoms/ndx-template) - This repository provides a cookiecutter template for creating Neurodata Extensions (NDX) for the Neurodata Without Borders (NWB) data standard, allowing users to easily generate a project structure for developing NWB extensions in Python.
-
-[**openbb**](https://github.com/davidatoms/openbb) - The OpenBB Platform is a free and open-source financial platform offering access to equity, options, crypto, forex, macro economy, fixed income, and more, along with a range of extensions for enhanced user experience.
-
-[**transformerlab-app**](https://github.com/davidatoms/transformerlab-app) - Transformer Lab is an open-source toolkit that allows users to train, tune, and chat with large language models on their own machine, providing a user-friendly interface and a wide range of features.
-
-[**OpenGlass**](https://github.com/davidatoms/OpenGlass) - OpenGlass turns regular glasses into smart glasses using an affordable microcontroller and open-source software, enabling features like object recognition, translation, and life recording.
 <!-- recent_repos ends -->
 
 <br>
