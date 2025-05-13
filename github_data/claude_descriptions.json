@@ -169,5 +169,56 @@
     "text": "A lightweight API that returns random, witty rejection reasons for when you need to gracefully say \"no\".",
     "generated_at": "2025-05-06T12:02:40.617569",
     "repo_type": "fork"
+  },
+  "DesktopEditors": {
+    "text": "ONLYOFFICE Desktop Editors is a free office suite combining text, spreadsheet, and presentation editors for creating, viewing, and editing Office Open XML documents locally without an internet connection.",
+    "generated_at": "2025-05-13T12:02:06.917309",
+    "repo_type": "fork"
+  },
+  "script-lab": {
+    "text": "Script Lab is a tool for experimenting with the Office JavaScript API and quickly prototyping Office Add-ins without leaving Excel, Outlook, Word, or PowerPoint.",
+    "generated_at": "2025-05-13T12:02:10.617760",
+    "repo_type": "fork"
+  },
+  "codex": {
+    "text": "Codex is a lightweight coding agent that runs in your terminal, providing ChatGPT-level reasoning and the ability to execute code, manipulate files, and iterate on changes with version control.",
+    "generated_at": "2025-05-13T12:02:14.626579",
+    "repo_type": "fork"
+  },
+  "zero": {
+    "text": "Zero is an open-source AI-powered email solution that allows users to self-host their own email app, integrate with external providers like Gmail, and leverage AI agents to modernize the email experience.",
+    "generated_at": "2025-05-13T12:02:18.551711",
+    "repo_type": "fork"
+  },
+  "void": {
+    "text": "Void is an open-source Cursor alternative that allows you to use AI agents on your codebase, checkpoint and visualize changes, and bring any model or host locally without retaining your data.",
+    "generated_at": "2025-05-13T12:02:21.779571",
+    "repo_type": "fork"
+  },
+  "Thinking-Claude": {
+    "text": "Thinking Claude is a project that enhances Claude's reasoning and transparency by providing instructions for in-depth thinking and a browser extension for neatly organizing Claude's thought process.",
+    "generated_at": "2025-05-13T12:02:25.620378",
+    "repo_type": "fork"
+  },
+  "cursor-talk-to-figma-mcp": {
+    "text": "Cursor Talk To Figma MCP",
+    "generated_at": "2025-05-13T12:02:27.620957",
+    "repo_type": "fork",
+    "is_fallback": true
+  },
+  "arxiv-mcp-server": {
+    "text": "The ArXiv MCP Server enables AI assistants to search and access arXiv research papers through a simple Model Context Protocol (MCP) interface, providing seamless integration with arXiv's repository.",
+    "generated_at": "2025-05-13T12:02:31.512689",
+    "repo_type": "fork"
+  },
+  "python-sdk": {
+    "text": "The MCP Python SDK is a Python implementation of the Model Context Protocol (MCP), enabling developers to build MCP servers that expose data, functionality, and interaction patterns to LLM applications in a standardized way.",
+    "generated_at": "2025-05-13T12:02:35.831205",
+    "repo_type": "fork"
+  },
+  "mcp-agent": {
+    "text": "mcp-agent is a framework for building composable AI agents using Model Context Protocol, implementing patterns like Augmented LLM, Parallel, Router, Intent-Classifier, and OpenAI's Swarm.",
+    "generated_at": "2025-05-13T12:02:40.180184",
+    "repo_type": "fork"
   }
 }

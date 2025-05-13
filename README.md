@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->May 06, 2025 at 12:02 (126/365 (0.345) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->May 13, 2025 at 12:02 (133/365 (0.364) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -15,25 +15,25 @@ I am passionate about a better future through innovation and investments.
 
 ## Recent Repositories
 <!-- recent_repos starts -->
-[**m474**](https://github.com/davidatoms/m474) - M474 is an open-source tool that enhances network privacy and security by allowing users to change MAC addresses, randomize internal IP addresses, and renew IP addresses.
+[**DesktopEditors**](https://github.com/davidatoms/DesktopEditors) - ONLYOFFICE Desktop Editors is a free office suite combining text, spreadsheet, and presentation editors for creating, viewing, and editing Office Open XML documents locally without an internet connection.
 
-[**goodfire-sdk**](https://github.com/davidatoms/goodfire-sdk) - The goodfire-sdk is a Python library that enables shaping AI model behavior by directly controlling a model's internal features, allowing for precise output control and task customization.
+[**script-lab**](https://github.com/davidatoms/script-lab) - Script Lab is a tool for experimenting with the Office JavaScript API and quickly prototyping Office Add-ins without leaving Excel, Outlook, Word, or PowerPoint.
 
-[**vscodium**](https://github.com/davidatoms/vscodium) - VSCodium is a project that builds and distributes freely-licensed binaries of Microsoft's VS Code source code, with telemetry and proprietary components removed.
+[**codex**](https://github.com/davidatoms/codex) - Codex is a lightweight coding agent that runs in your terminal, providing ChatGPT-level reasoning and the ability to execute code, manipulate files, and iterate on changes with version control.
 
-[**accelerate**](https://github.com/davidatoms/accelerate) - Accelerate is a lightweight PyTorch library that abstracts the boilerplate code for distributed training, enabling seamless execution of training scripts across various hardware setups like CPUs, GPUs, and TPUs.
+[**zero**](https://github.com/davidatoms/zero) - Zero is an open-source AI-powered email solution that allows users to self-host their own email app, integrate with external providers like Gmail, and leverage AI agents to modernize the email experience.
 
-[**system-design**](https://github.com/davidatoms/system-design) - This repository serves as a comprehensive guide covering the fundamentals and practical aspects of system design, from networking concepts to design patterns and real-world system architectures.
+[**void**](https://github.com/davidatoms/void) - Void is an open-source Cursor alternative that allows you to use AI agents on your codebase, checkpoint and visualize changes, and bring any model or host locally without retaining your data.
 
-[**fingpt**](https://github.com/davidatoms/fingpt) - FinGPT is an open-source project that provides financial large language models and benchmarks, enabling lightweight adaptation for applications like sentiment analysis and forecasting.
+[**Thinking-Claude**](https://github.com/davidatoms/Thinking-Claude) - Thinking Claude is a project that enhances Claude's reasoning and transparency by providing instructions for in-depth thinking and a browser extension for neatly organizing Claude's thought process.
 
-[**deepwiki-open**](https://github.com/davidatoms/deepwiki-open) - DeepWiki is an AI-powered tool that automatically generates comprehensive wikis, visual diagrams, and intelligent Q&A for any GitHub or GitLab repository by analyzing its code structure.
+[**cursor-talk-to-figma-mcp**](https://github.com/davidatoms/cursor-talk-to-figma-mcp) - Cursor Talk To Figma MCP
 
-[**r1-interpretability**](https://github.com/davidatoms/r1-interpretability) - This repository provides open-source State Autoencoder (SAE) models for interpreting DeepSeek-R1, a large reasoning AI model, along with databases of activations and feature labels to enable further research on model interpretability and alignment.
+[**arxiv-mcp-server**](https://github.com/davidatoms/arxiv-mcp-server) - The ArXiv MCP Server enables AI assistants to search and access arXiv research papers through a simple Model Context Protocol (MCP) interface, providing seamless integration with arXiv's repository.
 
-[**no-as-a-service**](https://github.com/davidatoms/no-as-a-service) - A lightweight API that returns random, witty rejection reasons for when you need to gracefully say "no".
+[**python-sdk**](https://github.com/davidatoms/python-sdk) - The MCP Python SDK is a Python implementation of the Model Context Protocol (MCP), enabling developers to build MCP servers that expose data, functionality, and interaction patterns to LLM applications in a standardized way.
 
-[**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
+[**mcp-agent**](https://github.com/davidatoms/mcp-agent) - mcp-agent is a framework for building composable AI agents using Model Context Protocol, implementing patterns like Augmented LLM, Parallel, Router, Intent-Classifier, and OpenAI's Swarm.
 <!-- recent_repos ends -->
 
 <br>
