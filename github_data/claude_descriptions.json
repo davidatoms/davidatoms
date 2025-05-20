@@ -220,5 +220,50 @@
     "text": "mcp-agent is a framework for building composable AI agents using Model Context Protocol, implementing patterns like Augmented LLM, Parallel, Router, Intent-Classifier, and OpenAI's Swarm.",
     "generated_at": "2025-05-13T12:02:40.180184",
     "repo_type": "fork"
+  },
+  "NLWeb": {
+    "text": "NLWeb is an open-source project enabling websites to create natural language interfaces leveraging schema.org data formats, allowing conversational interactions for both humans and AI agents.",
+    "generated_at": "2025-05-20T12:02:01.217650",
+    "repo_type": "fork"
+  },
+  "llmscript": {
+    "text": "llmscript allows you to write shell scripts in natural language. It leverages large language models to generate and test bash programs from your instructions.",
+    "generated_at": "2025-05-20T12:02:05.374184",
+    "repo_type": "fork"
+  },
+  "llm": {
+    "text": "llm is a CLI utility and Python library for interacting with Large Language Models, both via remote APIs and models that can be installed and run locally.",
+    "generated_at": "2025-05-20T12:02:09.000803",
+    "repo_type": "fork"
+  },
+  "following-instructions-human-feedback": {
+    "text": "This repository provides resources related to InstructGPT, a language model fine-tuned with human feedback to better align with user intent across various prompts and tasks.",
+    "generated_at": "2025-05-20T12:02:12.239989",
+    "repo_type": "fork"
+  },
+  "awesome-langgraphjs": {
+    "text": "This is a curated list of open source projects, applications, and YouTube videos related to LangGraph.js, a framework for building language AI applications.",
+    "generated_at": "2025-05-20T12:02:15.844900",
+    "repo_type": "fork"
+  },
+  "ai-chatbot": {
+    "text": "The ai-chatbot repository provides an open-source Next.js template for quickly building AI-powered chatbot applications using the AI SDK and various language models.",
+    "generated_at": "2025-05-20T12:02:19.697903",
+    "repo_type": "original"
+  },
+  "open-agent-platform": {
+    "text": "Open Agent Platform is a citizen developer platform allowing non-technical users to build, connect, and use agents with various tools, RAG servers, and other agents through an Agent Supervisor.",
+    "generated_at": "2025-05-20T12:02:24.183550",
+    "repo_type": "fork"
+  },
+  "simple-evals": {
+    "text": "This repository provides a lightweight library for evaluating language models on various benchmarks, emphasizing zero-shot, chain-of-thought prompting to reflect realistic usage.",
+    "generated_at": "2025-05-20T12:02:28.511085",
+    "repo_type": "fork"
+  },
+  "build_tools": {
+    "text": "build_tools provides automation scripts to build ONLYOFFICE Document Server, Document Builder, and Desktop Editors from source on Linux systems.",
+    "generated_at": "2025-05-20T12:02:32.039203",
+    "repo_type": "fork"
   }
 }

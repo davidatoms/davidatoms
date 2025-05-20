@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->May 13, 2025 at 12:02 (133/365 (0.364) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->May 20, 2025 at 12:02 (140/365 (0.384) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -15,25 +15,25 @@ I am passionate about a better future through innovation and investments.
 
 ## Recent Repositories
 <!-- recent_repos starts -->
-[**DesktopEditors**](https://github.com/davidatoms/DesktopEditors) - ONLYOFFICE Desktop Editors is a free office suite combining text, spreadsheet, and presentation editors for creating, viewing, and editing Office Open XML documents locally without an internet connection.
+[**NLWeb**](https://github.com/davidatoms/NLWeb) - NLWeb is an open-source project enabling websites to create natural language interfaces leveraging schema.org data formats, allowing conversational interactions for both humans and AI agents.
 
-[**script-lab**](https://github.com/davidatoms/script-lab) - Script Lab is a tool for experimenting with the Office JavaScript API and quickly prototyping Office Add-ins without leaving Excel, Outlook, Word, or PowerPoint.
+[**llmscript**](https://github.com/davidatoms/llmscript) - llmscript allows you to write shell scripts in natural language. It leverages large language models to generate and test bash programs from your instructions.
 
-[**codex**](https://github.com/davidatoms/codex) - Codex is a lightweight coding agent that runs in your terminal, providing ChatGPT-level reasoning and the ability to execute code, manipulate files, and iterate on changes with version control.
+[**llm**](https://github.com/davidatoms/llm) - llm is a CLI utility and Python library for interacting with Large Language Models, both via remote APIs and models that can be installed and run locally.
 
-[**zero**](https://github.com/davidatoms/zero) - Zero is an open-source AI-powered email solution that allows users to self-host their own email app, integrate with external providers like Gmail, and leverage AI agents to modernize the email experience.
+[**following-instructions-human-feedback**](https://github.com/davidatoms/following-instructions-human-feedback) - This repository provides resources related to InstructGPT, a language model fine-tuned with human feedback to better align with user intent across various prompts and tasks.
 
-[**void**](https://github.com/davidatoms/void) - Void is an open-source Cursor alternative that allows you to use AI agents on your codebase, checkpoint and visualize changes, and bring any model or host locally without retaining your data.
+[**awesome-langgraphjs**](https://github.com/davidatoms/awesome-langgraphjs) - This is a curated list of open source projects, applications, and YouTube videos related to LangGraph.js, a framework for building language AI applications.
 
-[**Thinking-Claude**](https://github.com/davidatoms/Thinking-Claude) - Thinking Claude is a project that enhances Claude's reasoning and transparency by providing instructions for in-depth thinking and a browser extension for neatly organizing Claude's thought process.
+[**ai-chatbot**](https://github.com/davidatoms/ai-chatbot) - The ai-chatbot repository provides an open-source Next.js template for quickly building AI-powered chatbot applications using the AI SDK and various language models.
 
-[**cursor-talk-to-figma-mcp**](https://github.com/davidatoms/cursor-talk-to-figma-mcp) - Cursor Talk To Figma MCP
+[**open-agent-platform**](https://github.com/davidatoms/open-agent-platform) - Open Agent Platform is a citizen developer platform allowing non-technical users to build, connect, and use agents with various tools, RAG servers, and other agents through an Agent Supervisor.
 
-[**arxiv-mcp-server**](https://github.com/davidatoms/arxiv-mcp-server) - The ArXiv MCP Server enables AI assistants to search and access arXiv research papers through a simple Model Context Protocol (MCP) interface, providing seamless integration with arXiv's repository.
+[**simple-evals**](https://github.com/davidatoms/simple-evals) - This repository provides a lightweight library for evaluating language models on various benchmarks, emphasizing zero-shot, chain-of-thought prompting to reflect realistic usage.
 
-[**python-sdk**](https://github.com/davidatoms/python-sdk) - The MCP Python SDK is a Python implementation of the Model Context Protocol (MCP), enabling developers to build MCP servers that expose data, functionality, and interaction patterns to LLM applications in a standardized way.
+[**build_tools**](https://github.com/davidatoms/build_tools) - build_tools provides automation scripts to build ONLYOFFICE Document Server, Document Builder, and Desktop Editors from source on Linux systems.
 
-[**mcp-agent**](https://github.com/davidatoms/mcp-agent) - mcp-agent is a framework for building composable AI agents using Model Context Protocol, implementing patterns like Augmented LLM, Parallel, Router, Intent-Classifier, and OpenAI's Swarm.
+[**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
 <!-- recent_repos ends -->
 
 <br>
