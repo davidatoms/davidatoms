@@ -1,6 +1,6 @@
 # David Adams Automatic GitHub Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->May 20, 2025 at 12:02 (140/365 (0.384) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->May 27, 2025 at 12:02 (147/365 (0.403) of the year)<!-- last_updated ends -->
 </p>
 
 <p align="left">
@@ -15,23 +15,23 @@ I am passionate about a better future through innovation and investments.
 
 ## Recent Repositories
 <!-- recent_repos starts -->
-[**NLWeb**](https://github.com/davidatoms/NLWeb) - NLWeb is an open-source project enabling websites to create natural language interfaces leveraging schema.org data formats, allowing conversational interactions for both humans and AI agents.
+[**hacks-leaks-and-revelations**](https://github.com/davidatoms/hacks-leaks-and-revelations) - This repository contains code and resources accompanying the book "Hacks, Leaks, and Revelations," guiding readers through acquiring datasets, using command-line tools, Python programming, and exploring real-world case studies.
 
-[**llmscript**](https://github.com/davidatoms/llmscript) - llmscript allows you to write shell scripts in natural language. It leverages large language models to generate and test bash programs from your instructions.
+[**voxelize**](https://github.com/davidatoms/voxelize) - Voxelize is a multiplayer, super-fast voxel engine that runs in your browser, allowing you to create and explore voxel worlds with custom blocks and physics.
 
-[**llm**](https://github.com/davidatoms/llm) - llm is a CLI utility and Python library for interacting with Large Language Models, both via remote APIs and models that can be installed and run locally.
+[**lunar-lander-ai**](https://github.com/davidatoms/lunar-lander-ai) - A genetic algorithm-based AI system that trains neural networks to autonomously land rockets in a lunar lander game simulation.
 
-[**following-instructions-human-feedback**](https://github.com/davidatoms/following-instructions-human-feedback) - This repository provides resources related to InstructGPT, a language model fine-tuned with human feedback to better align with user intent across various prompts and tasks.
+[**typehere.app**](https://github.com/davidatoms/typehere.app) - Type Here is a powerful web-based textarea with vim support, note-taking capabilities, workspaces, and various editing features like themes and scrollbar toggling.
 
-[**awesome-langgraphjs**](https://github.com/davidatoms/awesome-langgraphjs) - This is a curated list of open source projects, applications, and YouTube videos related to LangGraph.js, a framework for building language AI applications.
+[**LegalStories**](https://github.com/davidatoms/LegalStories) - LegalStories is a dataset containing 294 complex legal doctrines with LLM-generated stories and multiple-choice questions, aimed at enhancing legal literacy through storytelling.
 
-[**ai-chatbot**](https://github.com/davidatoms/ai-chatbot) - The ai-chatbot repository provides an open-source Next.js template for quickly building AI-powered chatbot applications using the AI SDK and various language models.
+[**tails**](https://github.com/davidatoms/tails) - Tails is a portable operating system that protects your privacy online and helps you avoid censorship by using the Tor network and leaving no trace on the computer.
 
-[**open-agent-platform**](https://github.com/davidatoms/open-agent-platform) - Open Agent Platform is a citizen developer platform allowing non-technical users to build, connect, and use agents with various tools, RAG servers, and other agents through an Agent Supervisor.
+[**evals**](https://github.com/davidatoms/evals) - The OpenAI Evals repository provides a framework for evaluating large language models, offering existing evals, tools for creating custom evals, and the ability to run private evals with proprietary data.
 
-[**simple-evals**](https://github.com/davidatoms/simple-evals) - This repository provides a lightweight library for evaluating language models on various benchmarks, emphasizing zero-shot, chain-of-thought prompting to reflect realistic usage.
+[**open-canvas**](https://github.com/davidatoms/open-canvas) - Open Canvas is an open-source web application that allows users to collaborate with AI agents to write and edit documents, leveraging memory and personalization for a seamless experience.
 
-[**build_tools**](https://github.com/davidatoms/build_tools) - build_tools provides automation scripts to build ONLYOFFICE Document Server, Document Builder, and Desktop Editors from source on Linux systems.
+[**nemo**](https://github.com/davidatoms/nemo) - The NVIDIA NeMo Framework is a conversational AI toolkit for building state-of-the-art models, offering support for large language models, multimodal models, video foundation models, and more, with a focus on performance and scalability.
 
 [**davidatoms**](https://github.com/davidatoms/davidatoms) - This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.
 <!-- recent_repos ends -->

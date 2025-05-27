@@ -265,5 +265,50 @@
     "text": "build_tools provides automation scripts to build ONLYOFFICE Document Server, Document Builder, and Desktop Editors from source on Linux systems.",
     "generated_at": "2025-05-20T12:02:32.039203",
     "repo_type": "fork"
+  },
+  "hacks-leaks-and-revelations": {
+    "text": "This repository contains code and resources accompanying the book \"Hacks, Leaks, and Revelations,\" guiding readers through acquiring datasets, using command-line tools, Python programming, and exploring real-world case studies.",
+    "generated_at": "2025-05-27T12:01:55.224295",
+    "repo_type": "fork"
+  },
+  "voxelize": {
+    "text": "Voxelize is a multiplayer, super-fast voxel engine that runs in your browser, allowing you to create and explore voxel worlds with custom blocks and physics.",
+    "generated_at": "2025-05-27T12:01:58.994120",
+    "repo_type": "fork"
+  },
+  "lunar-lander-ai": {
+    "text": "A genetic algorithm-based AI system that trains neural networks to autonomously land rockets in a lunar lander game simulation.",
+    "generated_at": "2025-05-27T12:02:01.962222",
+    "repo_type": "fork"
+  },
+  "typehere.app": {
+    "text": "Type Here is a powerful web-based textarea with vim support, note-taking capabilities, workspaces, and various editing features like themes and scrollbar toggling.",
+    "generated_at": "2025-05-27T12:02:05.283460",
+    "repo_type": "fork"
+  },
+  "LegalStories": {
+    "text": "LegalStories is a dataset containing 294 complex legal doctrines with LLM-generated stories and multiple-choice questions, aimed at enhancing legal literacy through storytelling.",
+    "generated_at": "2025-05-27T12:02:08.792714",
+    "repo_type": "fork"
+  },
+  "tails": {
+    "text": "Tails is a portable operating system that protects your privacy online and helps you avoid censorship by using the Tor network and leaving no trace on the computer.",
+    "generated_at": "2025-05-27T12:02:12.169014",
+    "repo_type": "fork"
+  },
+  "evals": {
+    "text": "The OpenAI Evals repository provides a framework for evaluating large language models, offering existing evals, tools for creating custom evals, and the ability to run private evals with proprietary data.",
+    "generated_at": "2025-05-27T12:02:15.762101",
+    "repo_type": "fork"
+  },
+  "open-canvas": {
+    "text": "Open Canvas is an open-source web application that allows users to collaborate with AI agents to write and edit documents, leveraging memory and personalization for a seamless experience.",
+    "generated_at": "2025-05-27T12:02:19.999219",
+    "repo_type": "fork"
+  },
+  "nemo": {
+    "text": "The NVIDIA NeMo Framework is a conversational AI toolkit for building state-of-the-art models, offering support for large language models, multimodal models, video foundation models, and more, with a focus on performance and scalability.",
+    "generated_at": "2025-05-27T12:02:24.055955",
+    "repo_type": "fork"
   }
 }
