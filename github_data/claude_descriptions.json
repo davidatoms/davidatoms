@@ -310,5 +310,30 @@
     "text": "The NVIDIA NeMo Framework is a conversational AI toolkit for building state-of-the-art models, offering support for large language models, multimodal models, video foundation models, and more, with a focus on performance and scalability.",
     "generated_at": "2025-05-27T12:02:24.055955",
     "repo_type": "fork"
+  },
+  "browser-use": {
+    "text": "Browser-use enables AI agents to control web browsers, automating tasks like shopping, job applications, and content creation through a user-friendly Python library.",
+    "generated_at": "2025-06-03T12:02:04.118918",
+    "repo_type": "fork"
+  },
+  "dgm": {
+    "text": "The Darwin G\u00f6del Machine (DGM) is an open-ended self-improving system that iteratively modifies its own codebase through machine learning, empirically validating each change using coding benchmarks, improving its ability to improve itself.",
+    "generated_at": "2025-06-03T12:02:07.642245",
+    "repo_type": "fork"
+  },
+  "neuronpedia": {
+    "text": "Neuronpedia is an open-source interpretability platform that enables exploring, visualizing, and interacting with AI model neurons and their representations.",
+    "generated_at": "2025-06-03T12:02:11.555229",
+    "repo_type": "fork"
+  },
+  "opencage-geocoding-mcp": {
+    "text": "This repository provides an MCP server that enables geocoding capabilities using the OpenCage geocoding API, allowing conversion between addresses and geographic coordinates.",
+    "generated_at": "2025-06-03T12:02:15.544984",
+    "repo_type": "fork"
+  },
+  "Warp": {
+    "text": "This is an issues-only repository for Warp, a modern GPU-accelerated terminal with AI and integrated team knowledge, compatible with various shells on macOS, Linux, and Windows.",
+    "generated_at": "2025-06-03T12:02:18.992217",
+    "repo_type": "fork"
   }
 }
