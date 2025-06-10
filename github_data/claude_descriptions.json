@@ -335,5 +335,15 @@
     "text": "This is an issues-only repository for Warp, a modern GPU-accelerated terminal with AI and integrated team knowledge, compatible with various shells on macOS, Linux, and Windows.",
     "generated_at": "2025-06-03T12:02:18.992217",
     "repo_type": "fork"
+  },
+  "vert": {
+    "text": "VERT is a file conversion utility that converts files on your device using WebAssembly, eliminating the need for cloud services and ensuring privacy.",
+    "generated_at": "2025-06-10T12:02:25.842793",
+    "repo_type": "fork"
+  },
+  "rybbit": {
+    "text": "Rybbit is an open-source, privacy-focused web and product analytics platform offering comprehensive insights without user tracking or cookies, ensuring GDPR and CCPA compliance.",
+    "generated_at": "2025-06-10T12:02:29.380805",
+    "repo_type": "fork"
   }
 }
