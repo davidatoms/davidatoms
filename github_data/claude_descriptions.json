@@ -345,5 +345,21 @@
     "text": "Rybbit is an open-source, privacy-focused web and product analytics platform offering comprehensive insights without user tracking or cookies, ensuring GDPR and CCPA compliance.",
     "generated_at": "2025-06-10T12:02:29.380805",
     "repo_type": "fork"
+  },
+  "Mailspring-Plugin-Starter": {
+    "text": "Mailspring-Plugin-Starter is a sample plugin project for extending the functionality of the Mailspring email client by adding custom components to the composer's action bar and message viewer sidebar.",
+    "generated_at": "2025-06-17T12:01:54.756790",
+    "repo_type": "fork"
+  },
+  "circuit-tracer-exploration": {
+    "text": "Circuit-tracer-exploration is a project focused on exploring and developing techniques for tracing and analyzing electronic circuits.",
+    "generated_at": "2025-06-17T12:01:58.104839",
+    "repo_type": "original"
+  },
+  "swiftmouse": {
+    "text": "A shortcat like app for keyboard-based mouse navigation on Linux",
+    "generated_at": "2025-06-17T12:02:00.105553",
+    "repo_type": "fork",
+    "is_fallback": true
   }
 }
