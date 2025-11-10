@@ -1,3 +1,10 @@
+<a href="https://github.com/davidatoms/davidatoms">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/davidatoms/davidatoms/main/dark_mode.svg">
+    <img alt="David Adams' GitHub Profile" src="https://raw.githubusercontent.com/davidatoms/davidatoms/main/light_mode.svg">
+  </picture>
+</a>
+
 # David Adams Semi-deterministic Readme
 
 <p align="left"><b>Last Updated:</b> <!-- last_updated starts -->June 24, 2025 at 12:02 (175/365 (0.479) of the year)<!-- last_updated ends -->
