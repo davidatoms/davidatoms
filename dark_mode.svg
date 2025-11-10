@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <style>
+    .title { font: bold 48px 'SF Mono', 'Consolas', monospace; fill: #f0f6fc; }
+    .subtitle { font: 20px 'SF Mono', 'Consolas', monospace; fill: #8b949e; }
+    .section-title { font: bold 24px 'SF Mono', 'Consolas', monospace; fill: #f0f6fc; }
+    .text { font: 16px 'SF Mono', 'Consolas', monospace; fill: #c9d1d9; }
+    .link { font: 16px 'SF Mono', 'Consolas', monospace; fill: #58a6ff; text-decoration: underline; }
+    .symbol { font: 16px 'SF Mono', 'Consolas', monospace; fill: #8b949e; }
+    .bg { fill: #0d1117; }
+  </style>
+
+  <rect class="bg" width="800" height="400" rx="10"/>
+  
+  <!-- Header -->
+  <text class="title" x="40" y="60">David Adams</text>
+  <text class="subtitle" x="40" y="90">Rust Developer • BCI Research • Systems Programming</text>
+  
+  <!-- Divider -->
+  <line x1="40" y1="110" x2="760" y2="110" stroke="#30363d" stroke-width="1"/>
+  
+  <!-- Current Projects -->
+  <text class="section-title" x="40" y="150">▸ Current Projects</text>
+  <text class="symbol" x="60" y="180">•</text>
+  <text class="link" x="80" y="180">zeroentropy-rust</text>
+  <text class="text" x="250" y="180">— Rust SDK for semantic search</text>
+  <text class="text" x="80" y="205">with BCI phoneme-to-word matching</text>
+  
+  <!-- Research Interests -->
+  <text class="section-title" x="40" y="250">▸ Research Interests</text>
+  <text class="symbol" x="60" y="280">•</text>
+  <text class="text" x="80" y="280">Brain-Computer Interfaces</text>
+  <text class="symbol" x="350" y="280">•</text>
+  <text class="text" x="370" y="280">Neural Decoding</text>
+  <text class="symbol" x="60" y="305">•</text>
+  <text class="text" x="80" y="305">Semantic Search</text>
+  <text class="symbol" x="350" y="305">•</text>
+  <text class="text" x="370" y="305">Systems Programming</text>
+  
+  <!-- Recent Work -->
+  <text class="section-title" x="40" y="350">▸ Recent Work</text>
+  <text class="text" x="60" y="375">Tested ZeroEntropy on 1,718 BCI phoneme-word pairs</text>
+</svg>
