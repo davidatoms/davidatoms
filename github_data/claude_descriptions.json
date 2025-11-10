@@ -1,0 +1,375 @@
+{
+  "davidatoms": {
+    "text": "This repository showcases David Adams' coding projects, professional profile, and documentation generated using Anthropic's Claude AI and GitHub Actions to update the README dynamically.",
+    "generated_at": "2025-03-28T17:27:34.500915",
+    "repo_type": "original"
+  },
+  "dynamo": {
+    "text": "NVIDIA Dynamo is a high-performance distributed inference framework designed for serving large language models, enabling disaggregated prefill & decode operations, dynamic GPU scheduling, and optimized data transfers.",
+    "generated_at": "2025-03-28T17:27:38.035705",
+    "repo_type": "fork"
+  },
+  "SpikeStream": {
+    "text": "SpikeStream is a visualization tool showcasing brain-inspired spiking neural networks as seen on the Cortical Labs website and YouTube channel.",
+    "generated_at": "2025-03-28T17:27:41.314169",
+    "repo_type": "fork"
+  },
+  "Doctor-Dignity": {
+    "text": "Doctor Dignity is an open-source project aiming to provide personalized medical assistance through a locally hosted, privacy-preserving large language model fine-tuned on medical data.",
+    "generated_at": "2025-03-28T17:27:44.799163",
+    "repo_type": "fork"
+  },
+  "hugo-website": {
+    "text": "A Hugo template tailored for minimalist academic websites, featuring the PaperMod theme, GitHub Pages deployment, and additional customizations for optimal performance across devices.",
+    "generated_at": "2025-03-28T17:27:48.640071",
+    "repo_type": "fork"
+  },
+  "jupyter_tool": {
+    "text": "A Python package for programmatically creating, loading, and manipulating Jupyter notebooks, enabling integration into AI agents and workflows.",
+    "generated_at": "2025-03-28T17:27:51.961161",
+    "repo_type": "fork"
+  },
+  "fabric": {
+    "text": "`fabric` is an open-source AI framework that helps integrate AI capabilities into everyday tasks and workflows through reusable prompt patterns.",
+    "generated_at": "2025-03-28T17:27:55.808030",
+    "repo_type": "fork"
+  },
+  "buster": {
+    "text": "Buster is an AI-powered analytics platform that provides a modern data warehousing solution and a self-serve business intelligence platform for building data applications.",
+    "generated_at": "2025-03-28T17:27:59.232578",
+    "repo_type": "fork"
+  },
+  "gnome-calendar": {
+    "text": "GNOME Calendar is an elegant and user-friendly calendar application designed for the GNOME desktop environment, with a strong emphasis on attention to detail and design.",
+    "generated_at": "2025-03-28T17:28:02.264182",
+    "repo_type": "fork"
+  },
+  "supervision": {
+    "text": "Supervision is an open-source Python library that provides reusable tools for computer vision tasks like object detection, segmentation, and visualization, enabling developers to build robust applications more efficiently.",
+    "generated_at": "2025-03-28T17:28:06.332890",
+    "repo_type": "fork"
+  },
+  "langchain": {
+    "text": "LangChain is a framework for building LLM-powered applications, enabling developers to chain together interoperable components and integrations, simplifying AI application development while future-proofing decisions as the underlying technology evolves.",
+    "generated_at": "2025-03-28T18:42:42.049283",
+    "repo_type": "fork"
+  },
+  "mlfrm": {
+    "text": "This repository offers Python code and Jupyter Notebooks companion to the O'Reilly book \"Machine Learning for Financial Risk Management with Python.\"",
+    "generated_at": "2025-03-29T01:38:55.213248",
+    "repo_type": "fork"
+  },
+  "healthcare-shared-components": {
+    "text": "This repository hosts shared components used by Microsoft Health Care services, such as FHIR Server for Azure, IoMT FHIR Connector, and Medical Imaging Server for DICOM.",
+    "generated_at": "2025-04-08T12:01:59.389380",
+    "repo_type": "fork"
+  },
+  "openbb": {
+    "text": "The OpenBB Platform is a free and open-source financial platform offering access to equity, options, crypto, forex, macro economy, fixed income, and more, along with a range of extensions for enhanced user experience.",
+    "generated_at": "2025-04-15T12:02:30.062448",
+    "repo_type": "fork"
+  },
+  "transformerlab-app": {
+    "text": "Transformer Lab is an open-source toolkit that allows users to train, tune, and chat with large language models on their own machine, providing a user-friendly interface and a wide range of features.",
+    "generated_at": "2025-04-15T12:02:34.117343",
+    "repo_type": "fork"
+  },
+  "OpenGlass": {
+    "text": "OpenGlass turns regular glasses into smart glasses using an affordable microcontroller and open-source software, enabling features like object recognition, translation, and life recording.",
+    "generated_at": "2025-04-15T12:02:37.559482",
+    "repo_type": "fork"
+  },
+  "omi": {
+    "text": "Omi is an open-source AI wearable that captures conversations, provides summaries, action items, and performs actions for you, offering automatic, high-quality transcriptions through a mobile app integration.",
+    "generated_at": "2025-04-15T12:02:41.541016",
+    "repo_type": "fork"
+  },
+  "vscode": {
+    "text": "Visual Studio Code is an open-source code editor developed by Microsoft, featuring comprehensive code editing, navigation, debugging, and an extensible architecture.",
+    "generated_at": "2025-04-15T12:02:44.897001",
+    "repo_type": "fork"
+  },
+  "DocumentServer": {
+    "text": "ONLYOFFICE Docs is a free collaborative online office suite comprising viewers and editors for texts, spreadsheets and presentations, forms and PDF, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.",
+    "generated_at": "2025-04-15T12:02:46.897466",
+    "repo_type": "fork",
+    "is_fallback": true
+  },
+  "ndx-template": {
+    "text": "This repository provides a cookiecutter template for creating Neurodata Extensions (NDX) for the Neurodata Without Borders (NWB) data standard, allowing users to easily generate a project structure for developing NWB extensions in Python.",
+    "generated_at": "2025-04-22T12:02:05.828333",
+    "repo_type": "fork"
+  },
+  "mlx-lm": {
+    "text": "MLX LM is a Python package for generating text and fine-tuning large language models on Apple silicon with MLX, supporting Hugging Face models, quantization, and distributed inference/fine-tuning.",
+    "generated_at": "2025-04-29T12:02:12.460320",
+    "repo_type": "fork"
+  },
+  "paper2code": {
+    "text": "PaperCoder is a multi-agent LLM system that transforms scientific papers into code repositories by following a planning, analysis, and code generation pipeline, automating the implementation process from research publications.",
+    "generated_at": "2025-04-29T12:02:16.414900",
+    "repo_type": "fork"
+  },
+  "system-prompts-and-models-of-ai-tools": {
+    "text": "This repository provides access to system prompts, tools, and AI models used by various AI companies, including FULL v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, and VSCode Agent, along with other open-sourced resources.",
+    "generated_at": "2025-04-29T12:02:20.171273",
+    "repo_type": "fork"
+  },
+  "pandas-ai": {
+    "text": "PandaAI is a Python library that enables users to interact with data using natural language, allowing them to ask questions, generate visualizations, and perform data analysis tasks with ease.",
+    "generated_at": "2025-04-29T12:02:23.797065",
+    "repo_type": "fork"
+  },
+  "kalshi-starter-code-python": {
+    "text": "This repository provides example Python code to access API-authenticated endpoints on Kalshi.com, a platform for trading event contracts.",
+    "generated_at": "2025-04-29T12:02:26.773502",
+    "repo_type": "fork"
+  },
+  "m474": {
+    "text": "M474 is an open-source tool that enhances network privacy and security by allowing users to change MAC addresses, randomize internal IP addresses, and renew IP addresses.",
+    "generated_at": "2025-05-06T12:02:10.406273",
+    "repo_type": "fork"
+  },
+  "goodfire-sdk": {
+    "text": "The goodfire-sdk is a Python library that enables shaping AI model behavior by directly controlling a model's internal features, allowing for precise output control and task customization.",
+    "generated_at": "2025-05-06T12:02:14.447263",
+    "repo_type": "fork"
+  },
+  "vscodium": {
+    "text": "VSCodium is a project that builds and distributes freely-licensed binaries of Microsoft's VS Code source code, with telemetry and proprietary components removed.",
+    "generated_at": "2025-05-06T12:02:18.236644",
+    "repo_type": "fork"
+  },
+  "accelerate": {
+    "text": "Accelerate is a lightweight PyTorch library that abstracts the boilerplate code for distributed training, enabling seamless execution of training scripts across various hardware setups like CPUs, GPUs, and TPUs.",
+    "generated_at": "2025-05-06T12:02:22.059604",
+    "repo_type": "fork"
+  },
+  "system-design": {
+    "text": "This repository serves as a comprehensive guide covering the fundamentals and practical aspects of system design, from networking concepts to design patterns and real-world system architectures.",
+    "generated_at": "2025-05-06T12:02:25.752837",
+    "repo_type": "fork"
+  },
+  "fingpt": {
+    "text": "FinGPT is an open-source project that provides financial large language models and benchmarks, enabling lightweight adaptation for applications like sentiment analysis and forecasting.",
+    "generated_at": "2025-05-06T12:02:29.688683",
+    "repo_type": "fork"
+  },
+  "deepwiki-open": {
+    "text": "DeepWiki is an AI-powered tool that automatically generates comprehensive wikis, visual diagrams, and intelligent Q&A for any GitHub or GitLab repository by analyzing its code structure.",
+    "generated_at": "2025-05-06T12:02:33.637705",
+    "repo_type": "fork"
+  },
+  "r1-interpretability": {
+    "text": "This repository provides open-source State Autoencoder (SAE) models for interpreting DeepSeek-R1, a large reasoning AI model, along with databases of activations and feature labels to enable further research on model interpretability and alignment.",
+    "generated_at": "2025-05-06T12:02:37.676203",
+    "repo_type": "fork"
+  },
+  "no-as-a-service": {
+    "text": "A lightweight API that returns random, witty rejection reasons for when you need to gracefully say \"no\".",
+    "generated_at": "2025-05-06T12:02:40.617569",
+    "repo_type": "fork"
+  },
+  "DesktopEditors": {
+    "text": "ONLYOFFICE Desktop Editors is a free office suite combining text, spreadsheet, and presentation editors for creating, viewing, and editing Office Open XML documents locally without an internet connection.",
+    "generated_at": "2025-05-13T12:02:06.917309",
+    "repo_type": "fork"
+  },
+  "script-lab": {
+    "text": "Script Lab is a tool for experimenting with the Office JavaScript API and quickly prototyping Office Add-ins without leaving Excel, Outlook, Word, or PowerPoint.",
+    "generated_at": "2025-05-13T12:02:10.617760",
+    "repo_type": "fork"
+  },
+  "codex": {
+    "text": "Codex is a lightweight coding agent that runs in your terminal, providing ChatGPT-level reasoning and the ability to execute code, manipulate files, and iterate on changes with version control.",
+    "generated_at": "2025-05-13T12:02:14.626579",
+    "repo_type": "fork"
+  },
+  "zero": {
+    "text": "Zero is an open-source AI-powered email solution that allows users to self-host their own email app, integrate with external providers like Gmail, and leverage AI agents to modernize the email experience.",
+    "generated_at": "2025-05-13T12:02:18.551711",
+    "repo_type": "fork"
+  },
+  "void": {
+    "text": "Void is an open-source Cursor alternative that allows you to use AI agents on your codebase, checkpoint and visualize changes, and bring any model or host locally without retaining your data.",
+    "generated_at": "2025-05-13T12:02:21.779571",
+    "repo_type": "fork"
+  },
+  "Thinking-Claude": {
+    "text": "Thinking Claude is a project that enhances Claude's reasoning and transparency by providing instructions for in-depth thinking and a browser extension for neatly organizing Claude's thought process.",
+    "generated_at": "2025-05-13T12:02:25.620378",
+    "repo_type": "fork"
+  },
+  "cursor-talk-to-figma-mcp": {
+    "text": "Cursor Talk To Figma MCP",
+    "generated_at": "2025-05-13T12:02:27.620957",
+    "repo_type": "fork",
+    "is_fallback": true
+  },
+  "arxiv-mcp-server": {
+    "text": "The ArXiv MCP Server enables AI assistants to search and access arXiv research papers through a simple Model Context Protocol (MCP) interface, providing seamless integration with arXiv's repository.",
+    "generated_at": "2025-05-13T12:02:31.512689",
+    "repo_type": "fork"
+  },
+  "python-sdk": {
+    "text": "The MCP Python SDK is a Python implementation of the Model Context Protocol (MCP), enabling developers to build MCP servers that expose data, functionality, and interaction patterns to LLM applications in a standardized way.",
+    "generated_at": "2025-05-13T12:02:35.831205",
+    "repo_type": "fork"
+  },
+  "mcp-agent": {
+    "text": "mcp-agent is a framework for building composable AI agents using Model Context Protocol, implementing patterns like Augmented LLM, Parallel, Router, Intent-Classifier, and OpenAI's Swarm.",
+    "generated_at": "2025-05-13T12:02:40.180184",
+    "repo_type": "fork"
+  },
+  "NLWeb": {
+    "text": "NLWeb is an open-source project enabling websites to create natural language interfaces leveraging schema.org data formats, allowing conversational interactions for both humans and AI agents.",
+    "generated_at": "2025-05-20T12:02:01.217650",
+    "repo_type": "fork"
+  },
+  "llmscript": {
+    "text": "llmscript allows you to write shell scripts in natural language. It leverages large language models to generate and test bash programs from your instructions.",
+    "generated_at": "2025-05-20T12:02:05.374184",
+    "repo_type": "fork"
+  },
+  "llm": {
+    "text": "llm is a CLI utility and Python library for interacting with Large Language Models, both via remote APIs and models that can be installed and run locally.",
+    "generated_at": "2025-05-20T12:02:09.000803",
+    "repo_type": "fork"
+  },
+  "following-instructions-human-feedback": {
+    "text": "This repository provides resources related to InstructGPT, a language model fine-tuned with human feedback to better align with user intent across various prompts and tasks.",
+    "generated_at": "2025-05-20T12:02:12.239989",
+    "repo_type": "fork"
+  },
+  "awesome-langgraphjs": {
+    "text": "This is a curated list of open source projects, applications, and YouTube videos related to LangGraph.js, a framework for building language AI applications.",
+    "generated_at": "2025-05-20T12:02:15.844900",
+    "repo_type": "fork"
+  },
+  "ai-chatbot": {
+    "text": "The ai-chatbot repository provides an open-source Next.js template for quickly building AI-powered chatbot applications using the AI SDK and various language models.",
+    "generated_at": "2025-05-20T12:02:19.697903",
+    "repo_type": "original"
+  },
+  "open-agent-platform": {
+    "text": "Open Agent Platform is a citizen developer platform allowing non-technical users to build, connect, and use agents with various tools, RAG servers, and other agents through an Agent Supervisor.",
+    "generated_at": "2025-05-20T12:02:24.183550",
+    "repo_type": "fork"
+  },
+  "simple-evals": {
+    "text": "This repository provides a lightweight library for evaluating language models on various benchmarks, emphasizing zero-shot, chain-of-thought prompting to reflect realistic usage.",
+    "generated_at": "2025-05-20T12:02:28.511085",
+    "repo_type": "fork"
+  },
+  "build_tools": {
+    "text": "build_tools provides automation scripts to build ONLYOFFICE Document Server, Document Builder, and Desktop Editors from source on Linux systems.",
+    "generated_at": "2025-05-20T12:02:32.039203",
+    "repo_type": "fork"
+  },
+  "hacks-leaks-and-revelations": {
+    "text": "This repository contains code and resources accompanying the book \"Hacks, Leaks, and Revelations,\" guiding readers through acquiring datasets, using command-line tools, Python programming, and exploring real-world case studies.",
+    "generated_at": "2025-05-27T12:01:55.224295",
+    "repo_type": "fork"
+  },
+  "voxelize": {
+    "text": "Voxelize is a multiplayer, super-fast voxel engine that runs in your browser, allowing you to create and explore voxel worlds with custom blocks and physics.",
+    "generated_at": "2025-05-27T12:01:58.994120",
+    "repo_type": "fork"
+  },
+  "lunar-lander-ai": {
+    "text": "A genetic algorithm-based AI system that trains neural networks to autonomously land rockets in a lunar lander game simulation.",
+    "generated_at": "2025-05-27T12:02:01.962222",
+    "repo_type": "fork"
+  },
+  "typehere.app": {
+    "text": "Type Here is a powerful web-based textarea with vim support, note-taking capabilities, workspaces, and various editing features like themes and scrollbar toggling.",
+    "generated_at": "2025-05-27T12:02:05.283460",
+    "repo_type": "fork"
+  },
+  "LegalStories": {
+    "text": "LegalStories is a dataset containing 294 complex legal doctrines with LLM-generated stories and multiple-choice questions, aimed at enhancing legal literacy through storytelling.",
+    "generated_at": "2025-05-27T12:02:08.792714",
+    "repo_type": "fork"
+  },
+  "tails": {
+    "text": "Tails is a portable operating system that protects your privacy online and helps you avoid censorship by using the Tor network and leaving no trace on the computer.",
+    "generated_at": "2025-05-27T12:02:12.169014",
+    "repo_type": "fork"
+  },
+  "evals": {
+    "text": "The OpenAI Evals repository provides a framework for evaluating large language models, offering existing evals, tools for creating custom evals, and the ability to run private evals with proprietary data.",
+    "generated_at": "2025-05-27T12:02:15.762101",
+    "repo_type": "fork"
+  },
+  "open-canvas": {
+    "text": "Open Canvas is an open-source web application that allows users to collaborate with AI agents to write and edit documents, leveraging memory and personalization for a seamless experience.",
+    "generated_at": "2025-05-27T12:02:19.999219",
+    "repo_type": "fork"
+  },
+  "nemo": {
+    "text": "The NVIDIA NeMo Framework is a conversational AI toolkit for building state-of-the-art models, offering support for large language models, multimodal models, video foundation models, and more, with a focus on performance and scalability.",
+    "generated_at": "2025-05-27T12:02:24.055955",
+    "repo_type": "fork"
+  },
+  "browser-use": {
+    "text": "Browser-use enables AI agents to control web browsers, automating tasks like shopping, job applications, and content creation through a user-friendly Python library.",
+    "generated_at": "2025-06-03T12:02:04.118918",
+    "repo_type": "fork"
+  },
+  "dgm": {
+    "text": "The Darwin G\u00f6del Machine (DGM) is an open-ended self-improving system that iteratively modifies its own codebase through machine learning, empirically validating each change using coding benchmarks, improving its ability to improve itself.",
+    "generated_at": "2025-06-03T12:02:07.642245",
+    "repo_type": "fork"
+  },
+  "neuronpedia": {
+    "text": "Neuronpedia is an open-source interpretability platform that enables exploring, visualizing, and interacting with AI model neurons and their representations.",
+    "generated_at": "2025-06-03T12:02:11.555229",
+    "repo_type": "fork"
+  },
+  "opencage-geocoding-mcp": {
+    "text": "This repository provides an MCP server that enables geocoding capabilities using the OpenCage geocoding API, allowing conversion between addresses and geographic coordinates.",
+    "generated_at": "2025-06-03T12:02:15.544984",
+    "repo_type": "fork"
+  },
+  "Warp": {
+    "text": "This is an issues-only repository for Warp, a modern GPU-accelerated terminal with AI and integrated team knowledge, compatible with various shells on macOS, Linux, and Windows.",
+    "generated_at": "2025-06-03T12:02:18.992217",
+    "repo_type": "fork"
+  },
+  "vert": {
+    "text": "VERT is a file conversion utility that converts files on your device using WebAssembly, eliminating the need for cloud services and ensuring privacy.",
+    "generated_at": "2025-06-10T12:02:25.842793",
+    "repo_type": "fork"
+  },
+  "rybbit": {
+    "text": "Rybbit is an open-source, privacy-focused web and product analytics platform offering comprehensive insights without user tracking or cookies, ensuring GDPR and CCPA compliance.",
+    "generated_at": "2025-06-10T12:02:29.380805",
+    "repo_type": "fork"
+  },
+  "Mailspring-Plugin-Starter": {
+    "text": "Mailspring-Plugin-Starter is a sample plugin project for extending the functionality of the Mailspring email client by adding custom components to the composer's action bar and message viewer sidebar.",
+    "generated_at": "2025-06-17T12:01:54.756790",
+    "repo_type": "fork"
+  },
+  "circuit-tracer-exploration": {
+    "text": "Circuit-tracer-exploration is a project focused on exploring and developing techniques for tracing and analyzing electronic circuits.",
+    "generated_at": "2025-06-17T12:01:58.104839",
+    "repo_type": "original"
+  },
+  "swiftmouse": {
+    "text": "A shortcat like app for keyboard-based mouse navigation on Linux",
+    "generated_at": "2025-06-17T12:02:00.105553",
+    "repo_type": "fork",
+    "is_fallback": true
+  },
+  "davidatoms.github.io": {
+    "text": "davidatoms.github.io is a modern, responsive personal blog focused on economic insights and analysis, featuring a clean three-pane layout and modular, component-based architecture.",
+    "generated_at": "2025-06-24T12:02:18.070170",
+    "repo_type": "original"
+  },
+  "langfuse": {
+    "text": "Langfuse is an open-source LLM engineering platform that helps teams develop, monitor, evaluate, and debug AI applications through features like tracing, prompt management, evaluations, and datasets.",
+    "generated_at": "2025-06-24T12:02:22.153146",
+    "repo_type": "fork"
+  }
+}

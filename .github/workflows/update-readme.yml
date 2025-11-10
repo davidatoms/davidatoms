@@ -1,0 +1,41 @@
+name: Update README
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * 2"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install python-graphql-client requests
+        
+    - name: Update README
+      env:
+        README_GITHUB_TOKEN: ${{ secrets.README_GITHUB_TOKEN }}
+        README_CLAUDE_TOKEN: ${{ secrets.README_CLAUDE_TOKEN }}
+      run: |
+        echo "Debug: Checking environment variables"
+        echo "GitHub token exists: ${{ secrets.README_GITHUB_TOKEN != '' }}"
+        echo "Claude token exists: ${{ secrets.README_CLAUDE_TOKEN != '' }}"
+        python .github/scripts/update_readme.py
+
+    - name: Commit and push if changed
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git add README.md
+        git add github_data/
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update README" && git push) 
