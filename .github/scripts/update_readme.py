@@ -403,14 +403,23 @@ def update_readme(activity_summary=None):
     day_of_year = now.timetuple().tm_yday
     year_progress = round(day_of_year / 365, 3)
     updated_content = replace_chunk(
-        readme_content, 
-        "last_updated", 
+        readme_content,
+        "last_updated",
         f"{last_updated} ({day_of_year}/365 ({year_progress}) of the year)",
         inline=True
     )
     
-    # Note: Activity summary is inserted via workflow using the text file
-    # The summary is written to ACTIVITY_SUMMARY_TEXT_FILE and inserted by the workflow
+    # Update activity summary if we have one
+    if activity_summary:
+        print("Inserting activity summary into README...")
+        updated_content = replace_chunk(
+            updated_content,
+            "ai_generated_summary_recent_activity",
+            activity_summary,
+            inline=True
+        )
+    else:
+        print("No activity summary to insert.")
     
     # Write updated README
     with open(README_FILE, 'w', encoding='utf-8') as f:

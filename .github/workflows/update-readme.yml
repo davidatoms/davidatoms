@@ -30,44 +30,13 @@ jobs:
         README_GITHUB_TOKEN: ${{ secrets.README_GITHUB_TOKEN }}
         README_CLAUDE_TOKEN: ${{ secrets.README_CLAUDE_TOKEN }}
       run: |
-        set -x  # Enable debug output
         echo "=== Starting README Update Process ==="
         echo "Debug: Checking environment variables"
         echo "GitHub token exists: ${{ secrets.README_GITHUB_TOKEN != '' }}"
         echo "Claude token exists: ${{ secrets.README_CLAUDE_TOKEN != '' }}"
         
-        # Run the Python script
-        echo "=== Running Python script ==="
+        # Run the Python script (it handles everything)
         python3 .github/scripts/update_readme.py
-        SCRIPT_EXIT_CODE=$?
-        echo "Script exited with code: $SCRIPT_EXIT_CODE"
-        
-        # Update activity summary in README if summary file exists
-        if [ -f github_data/activity_summary.txt ]; then
-          echo "=== Updating activity summary in README ==="
-          python3 << 'EOF'
-import re
-import sys
-try:
-    with open('README.md', 'r') as f:
-        content = f.read()
-    with open('github_data/activity_summary.txt', 'r') as f:
-        summary = f.read()
-    pattern = r'<!-- ai_generated_summary_recent_activity starts -->.*?<!-- ai_generated_summary_recent_activity ends -->'
-    replacement = f'<!-- ai_generated_summary_recent_activity starts -->{summary}<!-- ai_generated_summary_recent_activity ends -->'
-    content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-    with open('README.md', 'w') as f:
-        f.write(content)
-    print("Activity summary updated successfully")
-except Exception as e:
-    print(f"Error updating activity summary: {e}")
-    import traceback
-    traceback.print_exc()
-    sys.exit(1)
-EOF
-        else
-          echo "Warning: activity_summary.txt not found, skipping summary update"
-        fi
         
         echo "=== README Update Process Complete ==="
 
