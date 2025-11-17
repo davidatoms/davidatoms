@@ -4,11 +4,7 @@
 </p>
 
 <p>AI-generated summary of my recent coding activity</p>
-<!-- ai_generated_summary_recent_activity starts --># Your Weekly Coding Summary
-
-I've been pretty productive this week with 36 commits across 8 repositories! Most of my focus has been on **davidatoms** and **obsidian-mcp-server**, where I've been tackling some important infrastructure and feature work. On the davidatoms side, I've been hardening our workflows with better error handling, token validation, and debug logging to make things more resilient. 
-
-The more exciting stuff has been in obsidian-mcp-server, where I shipped a whole suite of graph visualization features—starting with ASCII terminal graphs, then leveling up to an interactive D3.js force-directed graph, and ultimately simplifying it to leverage Obsidian's native graph view. I also squashed a critical bug to ensure the correct vault opens in the graph. It was a nice arc from exploring custom visualizations to realizing the built-in solution was the better call!<!-- ai_generated_summary_recent_activity ends -->
+<!-- ai_generated_summary_recent_activity starts -->I've been pretty productive this week with 36 commits across 8 repositories! Most of my focus has been on **davidatoms** and **obsidian-mcp-server**, where I've been tackling some important infrastructure and feature work. On the davidatoms side, I've been hardening our workflows with better error handling, token validation, and debug logging to make things more resilient. The more exciting stuff has been in obsidian-mcp-server, where I shipped a whole suite of graph visualization features—starting with ASCII terminal graphs, then leveling up to an interactive D3.js force-directed graph, and ultimately simplifying it to leverage Obsidian's native graph view. I also squashed a critical bug to ensure the correct vault opens in the graph. It was a nice arc from exploring custom visualizations to realizing the built-in solution was the better call!<!-- ai_generated_summary_recent_activity ends -->
 
 
 <p align="left">

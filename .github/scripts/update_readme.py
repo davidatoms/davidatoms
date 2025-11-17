@@ -329,7 +329,9 @@ def generate_activity_summary(activity_data, claude_api_key):
 
 {activity_text}
 
-Write it in first person, as if I'm describing what I've been working on. Make it conversational and highlight the most interesting or significant work. Focus on the impact and progress made, not just numbers."""
+Write it in first person, as if I'm describing what I've been working on. Make it conversational and highlight the most interesting or significant work. Focus on the impact and progress made, not just numbers.
+
+IMPORTANT: Return ONLY the summary text as a single paragraph. Do NOT include any headings, titles, or markdown formatting like # or ##. Just the plain text summary."""
             }
         ]
     }
@@ -351,6 +353,11 @@ Write it in first person, as if I'm describing what I've been working on. Make i
                 result = response.json()
                 if "content" in result and len(result["content"]) > 0:
                     summary_text = result["content"][0]["text"].strip()
+                    
+                    # Remove any markdown headings (lines starting with #)
+                    lines = summary_text.split('\n')
+                    cleaned_lines = [line for line in lines if not line.strip().startswith('#')]
+                    summary_text = '\n'.join(cleaned_lines).strip()
                     
                     # Cache the summary (JSON)
                     with open(ACTIVITY_SUMMARY_FILE, 'w', encoding='utf-8') as f:
