@@ -15,8 +15,6 @@
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white" />
 </p>
 
-I am passionate about a better future through innovation and investments. 
-
 <br>
 
 ![Star this repository](https://img.shields.io/badge/Star%20this%20repository-FFDD00?style=flat&logo=github&logoColor=white)
