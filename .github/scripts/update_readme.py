@@ -440,7 +440,7 @@ def main():
     activity_data = fetch_recent_activity()
     if not activity_data:
         print("ERROR: Failed to fetch activity data. Exiting.")
-        return
+        sys.exit(1)
     
     # Step 2: Generate activity summary with Claude
     activity_summary = generate_activity_summary(activity_data)
@@ -450,8 +450,11 @@ def main():
     
     if activity_summary:
         print("\nProcess completed successfully!")
+        sys.exit(0)
     else:
         print("WARNING: No activity summary generated, but README timestamp was updated.")
+        # Don't fail if summary wasn't generated - timestamp update is still useful
+        sys.exit(0)
 
 if __name__ == "__main__":
     main()

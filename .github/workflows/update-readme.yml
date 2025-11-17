@@ -27,32 +27,46 @@ jobs:
         README_GITHUB_TOKEN: ${{ secrets.README_GITHUB_TOKEN }}
         README_CLAUDE_TOKEN: ${{ secrets.README_CLAUDE_TOKEN }}
       run: |
+        set -e  # Exit on error
         echo "Debug: Checking environment variables"
         echo "GitHub token exists: ${{ secrets.README_GITHUB_TOKEN != '' }}"
         echo "Claude token exists: ${{ secrets.README_CLAUDE_TOKEN != '' }}"
-        python .github/scripts/update_readme.py
         
-        # Update activity summary in README using sed if summary file exists
+        # Run the Python script
+        python3 .github/scripts/update_readme.py || exit 1
+        
+        # Update activity summary in README if summary file exists
         if [ -f github_data/activity_summary.txt ]; then
-          # Use a Python one-liner to safely replace multiline content
+          echo "Updating activity summary in README..."
           python3 << 'EOF'
 import re
-with open('README.md', 'r') as f:
-    content = f.read()
-with open('github_data/activity_summary.txt', 'r') as f:
-    summary = f.read()
-pattern = r'<!-- ai_generated_summary_recent_activity starts -->.*?<!-- ai_generated_summary_recent_activity ends -->'
-replacement = f'<!-- ai_generated_summary_recent_activity starts -->{summary}<!-- ai_generated_summary_recent_activity ends -->'
-content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-with open('README.md', 'w') as f:
-    f.write(content)
+try:
+    with open('README.md', 'r') as f:
+        content = f.read()
+    with open('github_data/activity_summary.txt', 'r') as f:
+        summary = f.read()
+    pattern = r'<!-- ai_generated_summary_recent_activity starts -->.*?<!-- ai_generated_summary_recent_activity ends -->'
+    replacement = f'<!-- ai_generated_summary_recent_activity starts -->{summary}<!-- ai_generated_summary_recent_activity ends -->'
+    content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+    with open('README.md', 'w') as f:
+        f.write(content)
+    print("Activity summary updated successfully")
+except Exception as e:
+    print(f"Error updating activity summary: {e}")
+    exit(1)
 EOF
+        else
+          echo "Warning: activity_summary.txt not found, skipping summary update"
         fi
 
     - name: Commit and push if changed
       run: |
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
-        git add README.md
-        git add github_data/
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update README" && git push) 
+        git add README.md github_data/ || true
+        if ! git diff --quiet --staged; then
+          git commit -m "Update README: Weekly activity summary" || exit 0
+          git push || exit 0
+        else
+          echo "No changes to commit"
+        fi 
