@@ -437,24 +437,39 @@ def main():
     print("=" * 50)
     
     # Step 1: Fetch recent activity
-    activity_data = fetch_recent_activity()
-    if not activity_data:
-        print("ERROR: Failed to fetch activity data. Exiting.")
+    try:
+        activity_data = fetch_recent_activity()
+    except Exception as e:
+        print(f"ERROR: Exception fetching activity data: {e}")
+        import traceback
+        traceback.print_exc()
+        activity_data = {}
+    
+    # Step 2: Generate activity summary with Claude (if we have data)
+    activity_summary = None
+    if activity_data and activity_data.get("summary"):
+        try:
+            activity_summary = generate_activity_summary(activity_data)
+        except Exception as e:
+            print(f"WARNING: Exception generating summary: {e}")
+            activity_summary = None
+    
+    # Step 3: Update README.md (always update timestamp, even if no summary)
+    try:
+        update_readme(activity_summary)
+        print("\nREADME.md updated successfully!")
+    except Exception as e:
+        print(f"ERROR: Failed to update README: {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
     
-    # Step 2: Generate activity summary with Claude
-    activity_summary = generate_activity_summary(activity_data)
-    
-    # Step 3: Update README.md
-    update_readme(activity_summary)
-    
     if activity_summary:
-        print("\nProcess completed successfully!")
-        sys.exit(0)
+        print("Process completed successfully with activity summary!")
     else:
         print("WARNING: No activity summary generated, but README timestamp was updated.")
-        # Don't fail if summary wasn't generated - timestamp update is still useful
-        sys.exit(0)
+    
+    sys.exit(0)
 
 if __name__ == "__main__":
     main()
