@@ -31,6 +31,23 @@ jobs:
         echo "GitHub token exists: ${{ secrets.README_GITHUB_TOKEN != '' }}"
         echo "Claude token exists: ${{ secrets.README_CLAUDE_TOKEN != '' }}"
         python .github/scripts/update_readme.py
+        
+        # Update activity summary in README using sed if summary file exists
+        if [ -f github_data/activity_summary.txt ]; then
+          # Use a Python one-liner to safely replace multiline content
+          python3 << 'EOF'
+import re
+with open('README.md', 'r') as f:
+    content = f.read()
+with open('github_data/activity_summary.txt', 'r') as f:
+    summary = f.read()
+pattern = r'<!-- ai_generated_summary_recent_activity starts -->.*?<!-- ai_generated_summary_recent_activity ends -->'
+replacement = f'<!-- ai_generated_summary_recent_activity starts -->{summary}<!-- ai_generated_summary_recent_activity ends -->'
+content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+with open('README.md', 'w') as f:
+    f.write(content)
+EOF
+        fi
 
     - name: Commit and push if changed
       run: |

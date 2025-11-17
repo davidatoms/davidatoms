@@ -1,6 +1,27 @@
 #!/usr/bin/env python3
 """
-github_to_readme.py - Lists your 10 most recent GitHub repositories with Claude-generated descriptions
+GitHub Profile README Automation System
+
+This script automates the generation and maintenance of a GitHub profile README by:
+1. Fetching recent GitHub activity (commits, PRs, issues) for the past week
+2. Generating a natural language summary of weekly activity using Anthropic's Claude AI
+3. Updating README.md with the activity summary and timestamp
+
+Author: David Adams
+License: All Rights Reserved
+Repository: https://github.com/davidatoms/davidatoms
+
+Usage:
+    python update_readme.py
+    
+Environment Variables Required:
+    README_GITHUB_TOKEN: GitHub Personal Access Token with repo and read:user permissions
+    README_CLAUDE_TOKEN: Anthropic API key for Claude access
+    
+Output:
+    - github_data/activity_summary.json: Activity summary cache
+    - github_data/activity_summary.txt: Activity summary text file
+    - README.md: Updated profile README with weekly activity summary
 """
 
 import os
@@ -9,12 +30,16 @@ import time
 import requests
 import re
 import pathlib
-from datetime import datetime
+from datetime import datetime, timedelta
 from python_graphql_client import GraphqlClient
 import sys
 
-# Remove or modify this section
-# load_dotenv()  # We'll make this conditional
+# Try to load from .env file if python-dotenv is available (for local testing)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()  # This will load .env file if it exists
+except ImportError:
+    pass  # dotenv not installed, that's okay - we'll use environment variables directly
 
 # Get environment variables directly
 GITHUB_USERNAME = "davidatoms"
@@ -32,12 +57,10 @@ print("\nEnvironment Check:")
 print(f"GitHub Token present: {'Yes' if GITHUB_TOKEN else 'No'}")
 print(f"Claude Token present: {'Yes' if CLAUDE_API_KEY else 'No'}")
 
-MAX_REPOS = 10  
-
 root = pathlib.Path(__file__).parent.parent.parent.resolve()  # Go up to repo root
 DATA_DIRECTORY = root / "github_data"
-GITHUB_DATA_FILE = DATA_DIRECTORY / "github_repos.json"
-CLAUDE_DESCRIPTIONS_FILE = DATA_DIRECTORY / "claude_descriptions.json"
+ACTIVITY_SUMMARY_FILE = DATA_DIRECTORY / "activity_summary.json"
+ACTIVITY_SUMMARY_TEXT_FILE = DATA_DIRECTORY / "activity_summary.txt"
 README_FILE = root / "README.md"
 
 # Ensure data directory exists
@@ -59,31 +82,79 @@ def replace_chunk(content, marker, chunk, inline=False):
     chunk = "<!-- {} starts -->{}<!-- {} ends -->".format(marker, chunk, marker)
     return r.sub(chunk, content)
 
-def fetch_github_data():
+def fetch_recent_activity():
     """
-    Fetch the ten most recent repositories using GraphQL
+    Fetch recent GitHub activity (commits, PRs, issues) for the past week
     """
-    print("STEP 1: Fetching GitHub repository data...")
+    print("\nSTEP 1: Fetching recent GitHub activity...")
     
     headers = {
         "Authorization": f"Bearer {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v4+json"
     }
     
+    # Calculate date 7 days ago
+    week_ago = (datetime.now() - timedelta(days=7)).isoformat() + "Z"
+    
     query = """
-    query {
+    query($sinceDateTime: DateTime!, $sinceGitTimestamp: GitTimestamp!) {
       user(login: "davidatoms") {
-        repositories(first: 10, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC}) {
+        contributionsCollection(from: $sinceDateTime) {
+          totalCommitContributions
+          totalIssueContributions
+          totalPullRequestContributions
+          totalPullRequestReviewContributions
+          commitContributionsByRepository(maxRepositories: 10) {
+            repository {
+              name
+              url
+            }
+            contributions {
+              totalCount
+            }
+          }
+        }
+        pullRequests(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}, states: [OPEN, MERGED, CLOSED]) {
+          nodes {
+            title
+            state
+            url
+            repository {
+              name
+            }
+            updatedAt
+            mergedAt
+            closedAt
+          }
+        }
+        issues(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}, states: [OPEN, CLOSED]) {
+          nodes {
+            title
+            state
+            url
+            repository {
+              name
+            }
+            updatedAt
+            closedAt
+          }
+        }
+        repositories(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}, privacy: PUBLIC) {
           nodes {
             name
             url
-            description
-            isPrivate
-            isFork
             updatedAt
-            object(expression: "HEAD:README.md") {
-              ... on Blob {
-                text
+            defaultBranchRef {
+              target {
+                ... on Commit {
+                  history(first: 5, since: $sinceGitTimestamp) {
+                    nodes {
+                      message
+                      committedDate
+                      url
+                    }
+                  }
+                }
               }
             }
           }
@@ -93,126 +164,167 @@ def fetch_github_data():
     """
     
     try:
-        response = client.execute(query=query, headers=headers)
-        repos = response["data"]["user"]["repositories"]["nodes"]
+        variables = {
+            "sinceDateTime": week_ago,
+            "sinceGitTimestamp": week_ago
+        }
+        response = client.execute(query=query, headers=headers, variables=variables)
         
-        repos_to_process = []
-        for repo in repos:
-            if not repo["isPrivate"]:  # Skip private repos
-                repos_to_process.append({
-                    "name": repo["name"],
-                    "url": repo["url"],
-                    "description": repo["description"],
-                    "type": "fork" if repo["isFork"] else "original",
-                    "updated_at": repo["updatedAt"],
-                    "readme": repo["object"]["text"] if repo["object"] else ""
-                })
+        if "errors" in response:
+            print(f"GraphQL errors: {response['errors']}")
+            return {}
         
-        # Save the data
-        with open(GITHUB_DATA_FILE, 'w', encoding='utf-8') as f:
-            json.dump(repos_to_process, f, indent=2)
+        user_data = response["data"]["user"]
+        contributions = user_data["contributionsCollection"]
         
-        print(f"GitHub data saved to {GITHUB_DATA_FILE}")
-        print(f"  - {len(repos_to_process)} repositories processed")
+        activity_data = {
+            "period_start": week_ago,
+            "period_end": datetime.now().isoformat() + "Z",
+            "summary": {
+                "total_commits": contributions["totalCommitContributions"],
+                "total_issues": contributions["totalIssueContributions"],
+                "total_prs": contributions["totalPullRequestContributions"],
+                "total_reviews": contributions["totalPullRequestReviewContributions"]
+            },
+            "commits_by_repo": [
+                {
+                    "repo": repo["repository"]["name"],
+                    "repo_url": repo["repository"]["url"],
+                    "commit_count": repo["contributions"]["totalCount"]
+                }
+                for repo in contributions["commitContributionsByRepository"]
+            ],
+            "pull_requests": [
+                {
+                    "title": pr["title"],
+                    "state": pr["state"],
+                    "url": pr["url"],
+                    "repo": pr["repository"]["name"],
+                    "updated_at": pr["updatedAt"],
+                    "merged_at": pr.get("mergedAt"),
+                    "closed_at": pr.get("closedAt")
+                }
+                for pr in user_data["pullRequests"]["nodes"]
+                if pr["updatedAt"] >= week_ago
+            ],
+            "issues": [
+                {
+                    "title": issue["title"],
+                    "state": issue["state"],
+                    "url": issue["url"],
+                    "repo": issue["repository"]["name"],
+                    "updated_at": issue["updatedAt"],
+                    "closed_at": issue.get("closedAt")
+                }
+                for issue in user_data["issues"]["nodes"]
+                if issue["updatedAt"] >= week_ago
+            ],
+            "recent_commits": []
+        }
         
-        return repos_to_process
+        # Extract recent commits from repositories
+        for repo in user_data["repositories"]["nodes"]:
+            if repo["defaultBranchRef"] and repo["defaultBranchRef"]["target"]:
+                commits = repo["defaultBranchRef"]["target"].get("history", {}).get("nodes", [])
+                for commit in commits:
+                    if commit["committedDate"] >= week_ago:
+                        activity_data["recent_commits"].append({
+                            "message": commit["message"],
+                            "repo": repo["name"],
+                            "repo_url": repo["url"],
+                            "date": commit["committedDate"],
+                            "url": commit["url"]
+                        })
+        
+        print(f"Activity data collected:")
+        print(f"  - {activity_data['summary']['total_commits']} commits")
+        print(f"  - {activity_data['summary']['total_prs']} pull requests")
+        print(f"  - {activity_data['summary']['total_issues']} issues")
+        print(f"  - {len(activity_data['recent_commits'])} recent commits")
+        
+        return activity_data
         
     except Exception as e:
-        print(f"Error fetching repos: {e}")
-        return []
-
-def fetch_readme(repo_name, headers):
-    """Fetch README content for a repository"""
-    url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{repo_name}/readme"
-    response = requests.get(url, headers=headers)
-    
-    if response.status_code == 200:
-        import base64
-        try:
-            encoded_content = response.json().get("content", "")
-            return base64.b64decode(encoded_content).decode("utf-8")
-        except Exception as e:
-            print(f"Error decoding README for {repo_name}: {e}")
-    
-    return ""
-
-def generate_descriptions(repos):
-    """
-    Send README content to Claude API for each repo and save the results.
-    Returns a dictionary of repo names and their Claude-generated descriptions.
-    """
-    print("\nSTEP 2: Generating descriptions with Claude...")
-    
-    if not CLAUDE_API_KEY:
-        print("ERROR: CLAUDE_API_KEY not found in environment variables.")
+        print(f"Error fetching activity: {e}")
+        import traceback
+        traceback.print_exc()
         return {}
-    
-    # Check if descriptions file already exists
-    existing_descriptions = {}
-    if os.path.exists(CLAUDE_DESCRIPTIONS_FILE):
-        try:
-            with open(CLAUDE_DESCRIPTIONS_FILE, 'r', encoding='utf-8') as f:
-                existing_descriptions = json.load(f)
-            print(f"Found existing descriptions for {len(existing_descriptions)} repositories.")
-        except json.JSONDecodeError:
-            print("Error reading existing descriptions file. Starting fresh.")
-    
-    # Process each repo
-    descriptions = {}
-    for i, repo in enumerate(repos):
-        repo_name = repo["name"]
-        
-        # Skip if we already have a description for this repo
-        if repo_name in existing_descriptions:
-            print(f"Using existing description for {repo_name}")
-            descriptions[repo_name] = existing_descriptions[repo_name]
-            continue
-        
-        print(f"Processing {i+1}/{len(repos)}: {repo_name}")
-        
-        description = get_claude_description(
-            repo_name, 
-            repo["readme"], 
-            "Generate a concise 1-2 sentence description of this repository explaining what it does."
-        )
-        
-        if description:
-            descriptions[repo_name] = {
-                "text": description,
-                "generated_at": datetime.now().isoformat(),
-                "repo_type": repo["type"]
-            }
-        else:
-            # Fallback to GitHub description
-            fallback = repo["description"] or f"Repository {repo_name}"
-            descriptions[repo_name] = {
-                "text": fallback,
-                "generated_at": datetime.now().isoformat(),
-                "repo_type": repo["type"],
-                "is_fallback": True
-            }
-        
-        # Save after each repo to maintain progress
-        with open(CLAUDE_DESCRIPTIONS_FILE, 'w', encoding='utf-8') as f:
-            json.dump({**existing_descriptions, **descriptions}, f, indent=2)
-        
-        # Rate limiting to avoid overloading
-        if i < len(repos) - 1:
-            time.sleep(2)
-    
-    print(f"Claude descriptions saved to {CLAUDE_DESCRIPTIONS_FILE}")
-    return descriptions
 
-def get_claude_description(repo_name, readme_content, instruction):
-    """Send a single README to Claude and get a description"""
-    if not readme_content:
+def generate_activity_summary(activity_data):
+    """
+    Generate a natural language summary of weekly activity using Claude
+    """
+    print("\nSTEP 2: Generating activity summary with Claude...")
+    
+    if not activity_data or not activity_data.get("summary"):
+        print("No activity data to summarize.")
         return None
     
-    # Truncate if very long
-    if len(readme_content) > 10000:
-        readme_content = readme_content[:10000] + "... [truncated]"
+    # Check if we have a recent summary (within last 6 days)
+    if os.path.exists(ACTIVITY_SUMMARY_FILE):
+        try:
+            with open(ACTIVITY_SUMMARY_FILE, 'r', encoding='utf-8') as f:
+                cached_summary = json.load(f)
+            generated_at_str = cached_summary.get("generated_at", "")
+            if generated_at_str:
+                # Handle ISO format with or without timezone
+                if generated_at_str.endswith("Z"):
+                    generated_at_str = generated_at_str.replace("Z", "+00:00")
+                summary_date = datetime.fromisoformat(generated_at_str)
+                # Remove timezone info for comparison
+                if summary_date.tzinfo:
+                    summary_date = summary_date.replace(tzinfo=None)
+                if (datetime.now() - summary_date) < timedelta(days=6):
+                    summary_text = cached_summary.get("summary_text")
+                    # Also write to text file for easy access
+                    if summary_text:
+                        with open(ACTIVITY_SUMMARY_TEXT_FILE, 'w', encoding='utf-8') as f:
+                            f.write(summary_text)
+                    print("Using cached activity summary (less than 6 days old).")
+                    return summary_text
+        except Exception as e:
+            print(f"Error reading cached summary: {e}")
     
-    # Claude API request
+    # Format activity data for Claude
+    summary_parts = []
+    
+    if activity_data["summary"]["total_commits"] > 0:
+        summary_parts.append(f"Made {activity_data['summary']['total_commits']} commits")
+        if activity_data["commits_by_repo"]:
+            top_repos = sorted(activity_data["commits_by_repo"], key=lambda x: x["commit_count"], reverse=True)[:3]
+            repo_names = [r["repo"] for r in top_repos]
+            summary_parts.append(f"across {len(activity_data['commits_by_repo'])} repositories, with most activity in {', '.join(repo_names)}")
+    
+    if activity_data["summary"]["total_prs"] > 0:
+        pr_states = {}
+        for pr in activity_data["pull_requests"]:
+            state = pr["state"].lower()
+            pr_states[state] = pr_states.get(state, 0) + 1
+        pr_details = ", ".join([f"{count} {state}" for state, count in pr_states.items()])
+        summary_parts.append(f"Worked on {activity_data['summary']['total_prs']} pull requests ({pr_details})")
+    
+    if activity_data["summary"]["total_issues"] > 0:
+        issue_states = {}
+        for issue in activity_data["issues"]:
+            state = issue["state"].lower()
+            issue_states[state] = issue_states.get(state, 0) + 1
+        issue_details = ", ".join([f"{count} {state}" for state, count in issue_states.items()])
+        summary_parts.append(f"Addressed {activity_data['summary']['total_issues']} issues ({issue_details})")
+    
+    if activity_data["summary"]["total_reviews"] > 0:
+        summary_parts.append(f"Reviewed {activity_data['summary']['total_reviews']} pull requests")
+    
+    activity_text = "\n".join(summary_parts) if summary_parts else "Limited activity this week"
+    
+    # Add recent commit messages for context
+    if activity_data["recent_commits"]:
+        commit_messages = "\n".join([
+            f"- {commit['repo']}: {commit['message'][:100]}"
+            for commit in activity_data["recent_commits"][:10]
+        ])
+        activity_text += f"\n\nRecent commits:\n{commit_messages}"
+    
+    # Generate summary with Claude
     headers = {
         "x-api-key": CLAUDE_API_KEY,
         "anthropic-version": "2023-06-01",
@@ -220,31 +332,23 @@ def get_claude_description(repo_name, readme_content, instruction):
     }
     
     data = {
-        "model": "claude-3-sonnet-20240229",
-        "max_tokens": 150,
+        "model": "claude-haiku-4-5-20251001",
+        "max_tokens": 300,
         "messages": [
             {
                 "role": "user",
-                "content": f"""
-Repository name: {repo_name}
+                "content": f"""Generate a natural, engaging 2-3 sentence summary of my coding activity for the past week based on this data:
 
-README content:
-```
-{readme_content}
-```
+{activity_text}
 
-{instruction}
-Keep it under 150 characters if possible.
-Avoid phrases like "This repository contains" or "This is a".
-"""
+Write it in first person, as if I'm describing what I've been working on. Make it conversational and highlight the most interesting or significant work. Focus on the impact and progress made, not just numbers."""
             }
         ]
     }
     
-    # Add retry logic with exponential backoff
     max_retries = 3
     retry_count = 0
-    retry_delay = 5  
+    retry_delay = 5
     
     while retry_count < max_retries:
         try:
@@ -258,14 +362,28 @@ Avoid phrases like "This repository contains" or "This is a".
             if response.status_code == 200:
                 result = response.json()
                 if "content" in result and len(result["content"]) > 0:
-                    return result["content"][0]["text"].strip()
+                    summary_text = result["content"][0]["text"].strip()
+                    
+                    # Cache the summary (JSON)
+                    with open(ACTIVITY_SUMMARY_FILE, 'w', encoding='utf-8') as f:
+                        json.dump({
+                            "summary_text": summary_text,
+                            "generated_at": datetime.now().isoformat(),
+                            "activity_data": activity_data
+                        }, f, indent=2)
+                    
+                    # Write summary to text file for easy insertion with echo/sed
+                    with open(ACTIVITY_SUMMARY_TEXT_FILE, 'w', encoding='utf-8') as f:
+                        f.write(summary_text)
+                    
+                    print("Activity summary generated successfully.")
+                    return summary_text
                 break
             elif response.status_code == 429 or response.status_code == 529:
-                # Rate limit or overloaded - retry after delay
                 retry_count += 1
                 print(f"Claude API overloaded or rate-limited. Retry {retry_count}/{max_retries} after {retry_delay} seconds...")
                 time.sleep(retry_delay)
-                retry_delay *= 2  # Exponential backoff
+                retry_delay *= 2
             else:
                 print(f"Claude API error: {response.status_code} - {response.text}")
                 break
@@ -276,9 +394,9 @@ Avoid phrases like "This repository contains" or "This is a".
     
     return None
 
-def update_readme(repos, descriptions):
+def update_readme(activity_summary=None):
     """
-    Update the README.md file with repository descriptions
+    Update the README.md file with activity summary and timestamp
     while preserving your personal bio and other sections.
     """
     print("\nSTEP 3: Updating README.md...")
@@ -291,55 +409,49 @@ def update_readme(repos, descriptions):
     with open(README_FILE, 'r', encoding='utf-8') as f:
         readme_content = f.read()
     
-    # Format repositories list
-    repos_md = "\n\n".join([
-        f"[**{repo['name']}**]({repo['url']}) - {descriptions[repo['name']]['text']}"
-        for repo in repos 
-        if repo['name'] in descriptions
-    ])
-    
-    # Update the repositories section
-    updated_content = replace_chunk(readme_content, "recent_repos", repos_md)
-    
     # Update the last updated section
     now = datetime.now()
     last_updated = now.strftime('%B %d, %Y at %H:%M')
     day_of_year = now.timetuple().tm_yday
     year_progress = round(day_of_year / 365, 3)
     updated_content = replace_chunk(
-        updated_content, 
+        readme_content, 
         "last_updated", 
         f"{last_updated} ({day_of_year}/365 ({year_progress}) of the year)",
         inline=True
     )
     
+    # Note: Activity summary is inserted via workflow using the text file
+    # The summary is written to ACTIVITY_SUMMARY_TEXT_FILE and inserted by the workflow
+    
     # Write updated README
     with open(README_FILE, 'w', encoding='utf-8') as f:
         f.write(updated_content)
     
-    print(f"README.md updated successfully with new descriptions.")
+    print(f"README.md updated successfully.")
 
 def main():
     """Run the complete process"""
     print("=" * 50)
-    print("GitHub to README.md Pipeline")
+    print("GitHub Profile README - Weekly Activity Summary")
     print("=" * 50)
     
-    # Step 1: Fetch GitHub data
-    github_data = fetch_github_data()
-    if not github_data:
-        print("ERROR: Failed to fetch GitHub data. Exiting.")
+    # Step 1: Fetch recent activity
+    activity_data = fetch_recent_activity()
+    if not activity_data:
+        print("ERROR: Failed to fetch activity data. Exiting.")
         return
     
-    # Step 2: Generate descriptions with Claude
-    descriptions = generate_descriptions(github_data)
+    # Step 2: Generate activity summary with Claude
+    activity_summary = generate_activity_summary(activity_data)
     
     # Step 3: Update README.md
-    if descriptions:
-        update_readme(github_data, descriptions)
+    update_readme(activity_summary)
+    
+    if activity_summary:
         print("\nProcess completed successfully!")
     else:
-        print("ERROR: No descriptions generated. README not updated.")
+        print("WARNING: No activity summary generated, but README timestamp was updated.")
 
 if __name__ == "__main__":
     main()

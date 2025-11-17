@@ -3,6 +3,14 @@
 .env.*
 .secrets
 
+# Generated activity summary files (regenerated on each run)
+github_data/activity_summary.txt
+github_data/activity_summary.json
+
+# Helper scripts (local development only)
+run_local.sh
+*.sh
+
 # Python
 __pycache__/
 *.py[cod]

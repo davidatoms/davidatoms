@@ -371,5 +371,45 @@
     "text": "Langfuse is an open-source LLM engineering platform that helps teams develop, monitor, evaluate, and debug AI applications through features like tracing, prompt management, evaluations, and datasets.",
     "generated_at": "2025-06-24T12:02:22.153146",
     "repo_type": "fork"
+  },
+  "Mailspring": {
+    "text": "Mailspring is a fast, open-source email client built with Electron and React, featuring a C++ sync engine for efficient performance and local privacy.",
+    "generated_at": "2025-11-17T15:11:41.675751",
+    "repo_type": "fork"
+  },
+  "examples": {
+    "text": "A curated collection of examples and patterns for building feature pipelines with Chalk, covering declarations, resolvers, caching, scheduling, and domain-specific solutions.",
+    "generated_at": "2025-11-17T15:11:45.060699",
+    "repo_type": "fork"
+  },
+  "conway-game-of-life": {
+    "text": "An interactive C implementation of Conway's Game of Life that runs in the terminal, featuring multi-threaded rendering and customizable board parameters.",
+    "generated_at": "2025-11-17T15:11:48.286681",
+    "repo_type": "fork"
+  },
+  "chorex": {
+    "text": "Chorex enables choreographic programming in Elixir, letting you describe distributed system interactions in a single global view and automatically extract implementations for each actor.",
+    "generated_at": "2025-11-17T15:11:51.891202",
+    "repo_type": "fork"
+  },
+  "obsidian-mcp-server": {
+    "text": "# Repository Description\n\nAn MCP server enabling Claude and AI assistants to interact with Obsidian vaults, offering note management, full-text search, link analysis, and vault navigation capabilities.",
+    "generated_at": "2025-11-17T15:11:55.885739",
+    "repo_type": "original"
+  },
+  "xleak": {
+    "text": "xleak is a blazing-fast terminal tool for viewing and exporting Excel spreadsheets with an interactive TUI, supporting multiple formats and powerful navigation features.",
+    "generated_at": "2025-11-17T15:12:00.244986",
+    "repo_type": "fork"
+  },
+  "braintotext2025": {
+    "text": "braintotext2025 is a Kedro-based data pipeline project with PySpark integration for processing and transforming data workflows.",
+    "generated_at": "2025-11-17T15:12:03.573283",
+    "repo_type": "original"
+  },
+  "zeroentropy-rust": {
+    "text": "Rust client library for ZeroEntropy API, providing semantic search and document retrieval with async support, strong typing, and comprehensive error handling.",
+    "generated_at": "2025-11-17T15:12:07.185496",
+    "repo_type": "original"
   }
 }
