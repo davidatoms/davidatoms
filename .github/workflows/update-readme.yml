@@ -30,16 +30,21 @@ jobs:
         README_GITHUB_TOKEN: ${{ secrets.README_GITHUB_TOKEN }}
         README_CLAUDE_TOKEN: ${{ secrets.README_CLAUDE_TOKEN }}
       run: |
+        set -x  # Enable debug output
+        echo "=== Starting README Update Process ==="
         echo "Debug: Checking environment variables"
         echo "GitHub token exists: ${{ secrets.README_GITHUB_TOKEN != '' }}"
         echo "Claude token exists: ${{ secrets.README_CLAUDE_TOKEN != '' }}"
         
-        # Run the Python script (don't fail workflow if script has warnings)
+        # Run the Python script
+        echo "=== Running Python script ==="
         python3 .github/scripts/update_readme.py
+        SCRIPT_EXIT_CODE=$?
+        echo "Script exited with code: $SCRIPT_EXIT_CODE"
         
         # Update activity summary in README if summary file exists
         if [ -f github_data/activity_summary.txt ]; then
-          echo "Updating activity summary in README..."
+          echo "=== Updating activity summary in README ==="
           python3 << 'EOF'
 import re
 import sys
@@ -56,20 +61,39 @@ try:
     print("Activity summary updated successfully")
 except Exception as e:
     print(f"Error updating activity summary: {e}")
+    import traceback
+    traceback.print_exc()
     sys.exit(1)
 EOF
         else
           echo "Warning: activity_summary.txt not found, skipping summary update"
         fi
+        
+        echo "=== README Update Process Complete ==="
 
     - name: Commit and push if changed
       run: |
+        set -x  # Enable debug output
+        echo "=== Starting Commit Step ==="
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
-        git add README.md github_data/ || true
+        
+        echo "Checking git status before add..."
+        git status
+        
+        echo "Adding files..."
+        git add README.md github_data/ 2>&1 || echo "Warning: git add had issues"
+        
+        echo "Checking git status after add..."
+        git status
+        
+        echo "Checking for staged changes..."
         if ! git diff --staged --quiet; then
-          git commit -m "Update README: Weekly activity summary"
-          git push
+          echo "Changes detected, committing..."
+          git commit -m "Update README: Weekly activity summary" || echo "Commit failed"
+          echo "Pushing changes..."
+          git push origin main || echo "Push failed"
         else
           echo "No changes to commit"
-        fi 
+        fi
+        echo "=== Commit Step Complete ===" 

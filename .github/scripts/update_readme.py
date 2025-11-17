@@ -43,20 +43,8 @@ except ImportError:
 
 # Get environment variables directly
 GITHUB_USERNAME = "davidatoms"
-GITHUB_TOKEN = os.environ.get("README_GITHUB_TOKEN")
-CLAUDE_API_KEY = os.environ.get("README_CLAUDE_TOKEN")  # Changed to match your secret name
 
-# Add validation
-if not GITHUB_TOKEN:
-    raise ValueError("README_GITHUB_TOKEN is not set in environment")
-if not CLAUDE_API_KEY:
-    raise ValueError("README_CLAUDE_TOKEN is not set in environment")
-
-# Debug prints
-print("\nEnvironment Check:")
-print(f"GitHub Token present: {'Yes' if GITHUB_TOKEN else 'No'}")
-print(f"Claude Token present: {'Yes' if CLAUDE_API_KEY else 'No'}")
-
+# Paths and file setup (safe to do at module level)
 root = pathlib.Path(__file__).parent.parent.parent.resolve()  # Go up to repo root
 DATA_DIRECTORY = root / "github_data"
 ACTIVITY_SUMMARY_FILE = DATA_DIRECTORY / "activity_summary.json"
@@ -65,9 +53,6 @@ README_FILE = root / "README.md"
 
 # Ensure data directory exists
 os.makedirs(DATA_DIRECTORY, exist_ok=True)
-
-# Add this new GraphQL client setup
-client = GraphqlClient(endpoint="https://api.github.com/graphql")
 
 def replace_chunk(content, marker, chunk, inline=False):
     """
@@ -82,16 +67,19 @@ def replace_chunk(content, marker, chunk, inline=False):
     chunk = "<!-- {} starts -->{}<!-- {} ends -->".format(marker, chunk, marker)
     return r.sub(chunk, content)
 
-def fetch_recent_activity():
+def fetch_recent_activity(github_token):
     """
     Fetch recent GitHub activity (commits, PRs, issues) for the past week
     """
     print("\nSTEP 1: Fetching recent GitHub activity...")
     
     headers = {
-        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Authorization": f"Bearer {github_token}",
         "Accept": "application/vnd.github.v4+json"
     }
+    
+    # Initialize GraphQL client
+    client = GraphqlClient(endpoint="https://api.github.com/graphql")
     
     # Calculate date 7 days ago
     week_ago = (datetime.now() - timedelta(days=7)).isoformat() + "Z"
@@ -250,7 +238,7 @@ def fetch_recent_activity():
         traceback.print_exc()
         return {}
 
-def generate_activity_summary(activity_data):
+def generate_activity_summary(activity_data, claude_api_key):
     """
     Generate a natural language summary of weekly activity using Claude
     """
@@ -326,7 +314,7 @@ def generate_activity_summary(activity_data):
     
     # Generate summary with Claude
     headers = {
-        "x-api-key": CLAUDE_API_KEY,
+        "x-api-key": claude_api_key,
         "anthropic-version": "2023-06-01",
         "content-type": "application/json"
     }
@@ -436,9 +424,24 @@ def main():
     print("GitHub Profile README - Weekly Activity Summary")
     print("=" * 50)
     
+    # Validate environment variables (moved here to be caught by try/except)
+    GITHUB_TOKEN = os.environ.get("README_GITHUB_TOKEN")
+    CLAUDE_API_KEY = os.environ.get("README_CLAUDE_TOKEN")
+    
+    print("\nEnvironment Check:")
+    print(f"GitHub Token present: {'Yes' if GITHUB_TOKEN else 'No'}")
+    print(f"Claude Token present: {'Yes' if CLAUDE_API_KEY else 'No'}")
+    
+    if not GITHUB_TOKEN:
+        print("ERROR: README_GITHUB_TOKEN is not set in environment")
+        sys.exit(1)
+    if not CLAUDE_API_KEY:
+        print("ERROR: README_CLAUDE_TOKEN is not set in environment")
+        sys.exit(1)
+    
     # Step 1: Fetch recent activity
     try:
-        activity_data = fetch_recent_activity()
+        activity_data = fetch_recent_activity(GITHUB_TOKEN)
     except Exception as e:
         print(f"ERROR: Exception fetching activity data: {e}")
         import traceback
@@ -449,9 +452,11 @@ def main():
     activity_summary = None
     if activity_data and activity_data.get("summary"):
         try:
-            activity_summary = generate_activity_summary(activity_data)
+            activity_summary = generate_activity_summary(activity_data, CLAUDE_API_KEY)
         except Exception as e:
             print(f"WARNING: Exception generating summary: {e}")
+            import traceback
+            traceback.print_exc()
             activity_summary = None
     
     # Step 3: Update README.md (always update timestamp, even if no summary)
