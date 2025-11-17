@@ -11,6 +11,10 @@ github_data/activity_summary.json
 run_local.sh
 *.sh
 
+# Documentation files (local reference only)
+CHANGELOG.md
+SETUP.md
+
 # Python
 __pycache__/
 *.py[cod]
