@@ -1,10 +1,14 @@
 # David Adams Automatic Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->November 17, 2025 at 15:16 (321/365 (0.879) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->November 17, 2025 at 22:34 (321/365 (0.879) of the year)<!-- last_updated ends -->
 </p>
 
 <p>AI-generated summary of my recent coding activity</p>
-<!-- ai_generated_summary_recent_activity starts -->This week I was heads-down on the obsidian-mcp-server project, pushing out 28 commits across multiple repositories while primarily focusing on graph visualization features. I experimented with several approaches—building an interactive D3.js force-directed graph, an ASCII terminal version, and Mermaid-based visualizations—before ultimately refactoring to leverage Obsidian's native graph view for a cleaner solution. Beyond that, I tackled a few housekeeping items like updating my portfolio site with fresh photos and a new profile picture, while also making progress on the zeroentropy-rust project.<!-- ai_generated_summary_recent_activity ends -->
+<!-- ai_generated_summary_recent_activity starts --># Your Weekly Coding Summary
+
+I've been pretty productive this week with 36 commits across 8 repositories! Most of my focus has been on **davidatoms** and **obsidian-mcp-server**, where I've been tackling some important infrastructure and feature work. On the davidatoms side, I've been hardening our workflows with better error handling, token validation, and debug logging to make things more resilient. 
+
+The more exciting stuff has been in obsidian-mcp-server, where I shipped a whole suite of graph visualization features—starting with ASCII terminal graphs, then leveling up to an interactive D3.js force-directed graph, and ultimately simplifying it to leverage Obsidian's native graph view. I also squashed a critical bug to ensure the correct vault opens in the graph. It was a nice arc from exploring custom visualizations to realizing the built-in solution was the better call!<!-- ai_generated_summary_recent_activity ends -->
 
 
 <p align="left">
