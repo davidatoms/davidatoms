@@ -1,10 +1,10 @@
 # David Adams Automatic Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->November 25, 2025 at 12:04 (329/365 (0.901) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->December 02, 2025 at 12:04 (336/365 (0.921) of the year)<!-- last_updated ends -->
 </p>
 
 <p>AI-generated summary of my recent coding activity</p>
-<!-- ai_generated_summary_recent_activity starts -->This week I've been pretty prolific with 33 commits across my projects, spending most of my time on my personal site and the davidatoms repository. I refreshed my online presence with a new profile picture and added some fresh content to my blog, while also fine-tuning the layout and spacing on my README to make everything look cleaner and more polished. I wrapped up an issue and kept the momentum going across a few other repositories, including some work on the obsidian-mcp-server project.<!-- ai_generated_summary_recent_activity ends -->
+<!-- ai_generated_summary_recent_activity starts -->This past week I focused on updating the README for my zenkit-mcp project, making sure the documentation accurately reflects what I've been working on. It was a smaller week in terms of commits, but getting the documentation in order is an important foundation for making the project more accessible to others. I'm glad I took the time to keep things current and clear.<!-- ai_generated_summary_recent_activity ends -->
 <br>
 <br>
 <p align="left">
