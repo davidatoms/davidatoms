@@ -1,10 +1,10 @@
 # David Adams Automatic Readme
 
-<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->June 30, 2026 at 12:36 (181/365 (0.496) of the year)<!-- last_updated ends -->
+<p align="left"><b>Last Updated:</b> <!-- last_updated starts -->July 07, 2026 at 12:45 (188/365 (0.515) of the year)<!-- last_updated ends -->
 </p>
 <p>Largely inspired by ![Simonw](https://github.com/simonw/simonw)'s page. Check out his page and check out his work on datasette!</p>
 
-<!-- ai_generated_summary_recent_activity starts -->This week I kept things pretty light on the coding front, mainly focusing on updating the README with a weekly activity summary to keep things documented and organized. It was a smaller week overall, but I made sure to capture what I've been working on so there's a clear record of progress moving forward.<!-- ai_generated_summary_recent_activity ends -->
+<!-- ai_generated_summary_recent_activity starts -->This week I've been focused on optimizing my portfolio site, with most of my work centered around improving performance and freshening up the content. I converted all my gallery images to WebP format, which cut the file size down dramatically from 24MB, and knocked out a few housekeeping tasks like updating my bio and removing outdated pages. The bulk of my commits went into davidatoms.github.io, along with some contributions to the ApacheStrongholdUSAResearch project, so it's been a solid week of polishing and modernizing things.<!-- ai_generated_summary_recent_activity ends -->
 <br>
 <br>
 <p align="left">
